@@ -1,0 +1,176 @@
+/* line 12, ../../sass/style.sass */
+section {
+  border: 1px solid rgba(255, 255, 0, 0.05);
+}
+
+/* line 14, ../../sass/style.sass */
+.content {
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+@media screen and (max-width: 900px) {
+  /* line 23, ../../sass/style.sass */
+  .page {
+    width: 900px;
+  }
+}
+@media screen and (min-width: 2561px) {
+  /* line 28, ../../sass/style.sass */
+  .page {
+    margin: 0 auto;
+    width: 2560px;
+  }
+}
+/* line 33, ../../sass/style.sass */
+.page {
+  position: relative;
+}
+
+/* line 36, ../../sass/style.sass */
+section .content {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+}
+
+/* line 41, ../../sass/style.sass */
+.angle_container {
+  overflow: hidden;
+}
+
+/* line 52, ../../sass/style.sass */
+h1 {
+  font-size: 60px;
+  color: black;
+}
+
+/* line 55, ../../sass/style.sass */
+h2 {
+  font-size: 25px;
+  color: #3f3f3f;
+}
+
+/* line 63, ../../sass/style.sass */
+#header {
+  height: 800px;
+  margin-bottom: -220px;
+}
+/* line 67, ../../sass/style.sass */
+#header #headerBackground {
+  height: 800px;
+  width: 100%;
+  background: url("../img/blurMac.jpg");
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+/* line 76, ../../sass/style.sass */
+#header .content {
+  height: 800px;
+}
+/* line 79, ../../sass/style.sass */
+#header .content .title {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  text-align: right;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 87, ../../sass/style.sass */
+#header .content .title h1 {
+  line-height: 1.25em;
+  color: #14a6e2;
+}
+/* line 91, ../../sass/style.sass */
+#header .content .title h2 {
+  padding: 20px 0;
+  color: #14a6e2;
+}
+
+/* line 102, ../../sass/style.sass */
+#outline .header_angle {
+  margin-bottom: -25px;
+}
+/* line 104, ../../sass/style.sass */
+#outline .content_wrapper {
+  background-color: #14a6e2;
+}
+/* line 106, ../../sass/style.sass */
+#outline .content_wrapper .content {
+  position: relative;
+  z-index: 10;
+  color: white;
+}
+/* line 110, ../../sass/style.sass */
+#outline .content_wrapper .content h1 {
+  color: white;
+}
+/* line 112, ../../sass/style.sass */
+#outline .content_wrapper .content h2 {
+  color: white;
+  font-size: 30px;
+  line-height: 1.75em;
+  margin: 40px 0;
+}
+/* line 117, ../../sass/style.sass */
+#outline .content_wrapper .content p {
+  font-size: 12px;
+  width: 300px;
+  line-height: 1.75em;
+}
+/* line 121, ../../sass/style.sass */
+#outline .content_wrapper .content img {
+  position: absolute;
+  top: 99px;
+  right: 27px;
+}
+
+/* line 128, ../../sass/style.sass */
+#swift {
+  background: url("../img/swift_blur.jpg");
+  background-size: cover;
+  min-height: 800px;
+  margin-top: -188px;
+  margin-bottom: -188px;
+}
+/* line 135, ../../sass/style.sass */
+#swift .text {
+  margin-top: 188px;
+  color: white;
+  text-align: right;
+}
+/* line 139, ../../sass/style.sass */
+#swift .text h1 {
+  color: white;
+}
+/* line 141, ../../sass/style.sass */
+#swift .text p {
+  width: 300px;
+  font-size: 20px;
+  line-height: 2em;
+  margin: 40px 0 0 auto;
+}
+
+/* line 151, ../../sass/style.sass */
+#aizu {
+  background-image: url("../img/aizuLocation2.svg");
+  background-size: cover;
+  height: 900px;
+}
+/* line 157, ../../sass/style.sass */
+#aizu .content .text {
+  margin-top: 20%;
+  color: white;
+}
+/* line 161, ../../sass/style.sass */
+#aizu .content .text h1 {
+  color: white;
+}
+/* line 163, ../../sass/style.sass */
+#aizu .content .text p {
+  width: 450px;
+  font-size: 24px;
+  line-height: 2em;
+  margin-top: 40px;
+}

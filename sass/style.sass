@@ -1,0 +1,189 @@
+
+
+
+$contentWidth: 900px
+$widePageWidth: 2561px
+
+$headerHeight: 800px
+
+$blueColor: #14a6e2
+
+//border
+section
+	border: 1px solid rgba(255,255,0,0.05)
+.content
+	border: 1px solid rgba(0,0,0,0.02)
+
+
+
+
+// STRUCTURE --------------------------
+
+@media screen and (max-width:$contentWidth)
+	.page
+		width: $contentWidth
+		// overflow: hidden
+
+@media screen and (min-width:$widePageWidth)
+	.page
+		margin: 0 auto
+		width: $widePageWidth - 1
+		// overflow: hidden
+
+.page
+	position: relative
+
+section .content
+	position: relative
+	width: $contentWidth
+	margin: 0 auto
+
+.angle_container
+	overflow: hidden
+
+
+// -------------------------------------
+
+
+
+
+// Entire Setting ----------------------
+
+h1
+	font-size: 60px
+	color: black
+h2
+	font-size: 25px
+	color: #3f3f3f
+
+// -------------------------------------
+
+
+
+#header
+	height: $headerHeight
+	margin-bottom: -220px
+
+	#headerBackground
+		height: $headerHeight
+		width: 100%
+		// background-color: cyan
+		background: url('../img/blurMac.jpg')
+		background-size: cover
+		position: absolute
+		z-index: -1
+
+	.content
+		height: $headerHeight
+
+		.title
+			position: absolute
+			top: 100px
+			right: 20px
+			text-align: right
+			padding: 20px
+			background-color: rgba(white,0.5)
+
+			h1
+				line-height: 1.25em
+				color: $blueColor
+
+			h2
+				padding: 20px 0
+				color: $blueColor
+
+
+
+
+
+
+
+#outline
+	.header_angle
+		margin-bottom: -25px
+	.content_wrapper
+		background-color: $blueColor
+		.content
+			position: relative
+			z-index: 10
+			color: white
+			h1
+				color: white
+			h2
+				color: white
+				font-size: 30px
+				line-height: 1.75em
+				margin: 40px 0
+			p
+				font-size: 12px
+				width: $contentWidth/3
+				line-height: 1.75em
+			img
+				position: absolute
+				top: 99px
+				right: 27px
+
+
+
+#swift
+	background: url('../img/swift_blur.jpg')
+	background-size: cover
+	min-height: 800px
+	margin-top: -188px
+	margin-bottom: -188px
+
+	.text
+		margin-top: 188px
+		color: white
+		text-align: right
+		h1
+			color: white
+		p
+			width: $contentWidth/3
+			font-size: 20px
+			line-height: 2em
+			margin: 40px 0 0 auto
+
+
+
+
+
+#aizu
+	background-image: url('../img/aizuLocation2.svg')
+	background-size: cover
+	height: 900px
+
+	.content
+		.text
+			margin-top: 20%
+			color: white
+
+			h1
+				color: white
+			p
+				width: $contentWidth/2
+				font-size: 24px
+				line-height: 2em
+				margin-top: 40px
+
+// #aizu
+// 	background-image: url('../img/aizuLocation2.svg')
+// 	background-size: cover
+// 	height: 900px
+// 	.header_angle
+// 		margin-bottom: -25px
+// 	.content_wrapper
+// 		// background-color: $blueColor
+// 		// background-image: url('../img/fukushima.png')
+// 		background-size: cover
+// 		.content
+// 			position: relative
+// 			z-index: 10
+// 			color: white
+// 			h1
+// 				color: white
+
+
+
+
+

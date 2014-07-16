@@ -22,35 +22,59 @@ html
         #headerBackground
         .content
           .title
-            h1 会津Swift合宿
-            h2 Swift漬けで会津をよくする10日間
+            h1 Swift Summer Camp<br>in Aizu
+            h2 Swift漬けで会津をハックする10日間
 
       section#outline
         .angle_container#angleHeader1
+          .header_angle.angle
+            svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative; left: 0.5px;')
+                //- desc(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+                //- defs(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+                path(fill='#14a6e2', stroke='none', d='M0,0L2560,250L0,250Z', style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+
           img.headerImg
         .content_wrapper
           .content
             h1 会津Swift合宿とは？  
-            h2 Swiftを勉強して、iOSアプリを開発して、会津をよくする10日間。
-            p 今激アツなSwift漬けな毎日なのはもちろん、会津観光をしつつ、アプリを開発して会津の町を少しだけよくしよう。コンテスト形式で行い、優勝チームには賞品があります！そして、できたアプリをみんなでMushUpAwardsに応募しよう！
-            img#AizuAndSwiftImg
+            h2 Swiftを勉強して、<br>iOSアプリを開発して、<br>会津をよくする10日間。
+            p 今激アツなSwift漬けな毎日なのはもちろん、会津観光をしつつ、アプリを開発して会津の町を少しだけよくしよう。コンテスト形式で行い、優勝チームには賞品をプレゼント！そして、できたアプリをみんなでMushUpAwardsに応募しよう！
+            img#AizuAndSwiftImg(src="img/aizu_x_swift.png")
         .angle_container#angleFooter1
+          .footer_angle.angle
+            svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative;')
+                //- desc(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+                //- defs(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+                path(fill='#14a6e2', stroke='none', d='M0,0L2560,0L0,250Z', style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+
 
       section#swift
         .content
-          h1 開発言語Swift!!!
-          p Swiftは6/5のWWDC2014にて発表されて以来、現在一番盛り上がってる言語です。Swiftを学びたい人も現在とても多い状況です。この夏、この合宿でSwiftをマスターしよう。
+          .text
+            h1 Swiftとは？
+            p Swiftは6/5のWWDC2014にて発表されて以来、現在一番盛り上がってる言語です。Swiftを学びたい人も現在とても多い状況です。この夏、この合宿でSwiftをマスターしよう。
           img#swiftImg
 
       section#aizu
-        .angle_container#angleHeader2
+        //- .angle_container#angleHeader2
+          .header_angle.angle
+            //- svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative; left: 0.5px;')
+                //- desc(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+                //- defs(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+                path(fill='#14a6e2', stroke='none', d='M0,0L2560,250L0,250Z', style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
           img.headerImg
-        .content_wrapper
-          .content
-          h1 会津ってどこ？
-          p この合宿を主催しているのはデザイニウムのインターン生です！デザイニウムは会津若松市にあるので、この合宿は会津で観光をしながら行います！
+        //- .content_wrapper
+        .content
+          .text
+            h1 会津ってどこ？
+            p この合宿を主催しているのはデザイニウムのインターン生です！<br>デザイニウムは会津若松市にあるので、この合宿は会津で観光をしながら行います！
           img#aizuImg
-        .angle_container#angleFooter2
+        //- .angle_container#angleFooter2
+          .footer_angle.angle
+            //- svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative;')
+                //- desc(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+                //- defs(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
+                path(fill='#14a6e2', stroke='none', d='M0,0L2560,0L0,250Z', style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
 
       section#recruitment
         .content
@@ -67,22 +91,24 @@ html
           .scheduleItem#shedule5
 
       section#photos
-        img.photos
-        img.photos
-        img.photos
-        img.photos
-        img.photos
-        img.photos
-        img.photos
-        img#prizeImg
-        p#prizeText 優勝賞品はiPad Air!!
+        .content
+          img.photos
+          img.photos
+          img.photos
+          img.photos
+          img.photos
+          img.photos
+          img.photos
+          img#prizeImg
+          p#prizeText 優勝賞品はiPad Air!!
 
       section#applicationForm
-        p#finalMessage さぁ、会津Swift合宿で熱い夏を送ろうぜ！！！
+        .content
+          p#finalMessage さぁ、会津Swift合宿で熱い夏を送ろうぜ！！！
 
-        button#applicationButton 応募する！
+          button#applicationButton 応募する！
 
-        div#shareButtons
+          div#shareButtons
 
       section#fottter
 
