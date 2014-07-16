@@ -38,7 +38,7 @@ html
           .content
             h1 会津Swift合宿とは？  
             h2 Swiftを勉強して、<br>iOSアプリを開発して、<br>会津をよくする10日間。
-            p 今激アツなSwift漬けな毎日なのはもちろん、会津観光をしつつ、アプリを開発して会津の町を少しだけよくしよう。コンテスト形式で行い、優勝チームには賞品をプレゼント！そして、できたアプリをみんなでMushUpAwardsに応募しよう！
+            p ㈱デザイニウムのインターン生が企画し、デザイニウムが提供する夏の開発合宿(２年目)。今激アツなSwift漬けな毎日なのはもちろん、会津観光をしつつ、アプリを開発して会津の町を少しだけよくしよう。コンテスト形式で行い、優勝チームには賞品をプレゼント！そして、できたアプリをみんなでMushUpAwardsに応募しよう！
             img#AizuAndSwiftImg(src="img/aizu_x_swift.png")
         .angle_container#angleFooter1
           .footer_angle.angle
@@ -51,44 +51,56 @@ html
       section#swift
         .content
           .text
-            h1 Swiftとは？
+            h1 この夏、Swiftを<br>マスターしよう。
             p Swiftは6/5のWWDC2014にて発表されて以来、現在一番盛り上がってる言語です。Swiftを学びたい人も現在とても多い状況です。この夏、この合宿でSwiftをマスターしよう。
           img#swiftImg
 
       section#aizu
-        //- .angle_container#angleHeader2
-          .header_angle.angle
-            //- svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative; left: 0.5px;')
-                //- desc(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
-                //- defs(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
-                path(fill='#14a6e2', stroke='none', d='M0,0L2560,250L0,250Z', style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
-          img.headerImg
-        //- .content_wrapper
         .content
           .text
             h1 会津ってどこ？
             p この合宿を主催しているのはデザイニウムのインターン生です！<br>デザイニウムは会津若松市にあるので、この合宿は会津で観光をしながら行います！
           img#aizuImg
-        //- .angle_container#angleFooter2
-          .footer_angle.angle
-            //- svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative;')
-                //- desc(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
-                //- defs(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
-                path(fill='#14a6e2', stroke='none', d='M0,0L2560,0L0,250Z', style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
 
       section#recruitment
         .content
-          h1 参加できるのは、○○な大学生６名だけ！
-          p こちらの都合上、参加できるのは６名のみとさせていただきました！観光したり宿に寝泊まりしたり美味しいもの食べたりできますが大人数は無理です！
-          img#peopleImg
+          .title
+            h1 募集要項
+          .requirementList
+            //- h2 こんな人
+            ul
+              li 大学生 or 専門生  
+              li 初心者だけどアプリ創りたい人
+              li iOSアプリを開発したい人
+              li Swiftをやってみたい人
+              li 会津を観光したい人
+              li 熱い夏を送りたい人
+          .persons
+            p.upper
+              img.person(src="img/person_white.png")
+              img.person(src="img/person_white.png")
+              img.person(src="img/person_white.png")
+            p.lower
+              img.person(src="img/person_white.png")
+              img.person(src="img/person_white.png")
+              img.person(src="img/person_white.png")
+            p.limitOfPerson 6名
+
+
       section#schedule
         .content
+          //-カルーセルのライブラリ使うべきだな
           .scheduleItem#sheduleOutline
+            h1 日程
+            p.period 9/1 ~ 9/10
+            img.calender(src='img/sep1.png')
+
           .scheduleItem#shedule1
           .scheduleItem#shedule2
           .scheduleItem#shedule3
           .scheduleItem#shedule4
           .scheduleItem#shedule5
+
 
       section#photos
         .content
@@ -100,15 +112,18 @@ html
           img.photos
           img.photos
           img#prizeImg
-          p#prizeText 優勝賞品はiPad Air!!
+
+
+      section#prize(class="skrollable skrollable-between" data-bottom-top="background-position: center -500px;" data-top-bottom="background-position: center 100px;" style="background-position: 50% -234.18290854572712px;")
+          p 優勝賞品はiPad Air!!
+
 
       section#applicationForm
         .content
-          p#finalMessage さぁ、会津Swift合宿で熱い夏を送ろうぜ！！！
-
-          button#applicationButton 応募する！
-
+          img#finalMessage(src="img/finalMessage.png")
+          a#applicationButton.ghostButton 応募する！
           div#shareButtons
+
 
       section#fottter
 
