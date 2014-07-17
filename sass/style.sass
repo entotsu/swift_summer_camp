@@ -137,18 +137,20 @@ h2
 
 	.content
 		.text
+			width: 60%
 			position: absolute
 			right: 0%
 			margin-top: 188px + 20
-			width: 60%
-			color: white
 			text-align: left
+			color: white
 			h1
+				line-height: 1.5em
 				color: white
 			p
-				font-size: 20px
+				margin: 20px 0 0 auto
 				line-height: 2em
-				margin: 40px 0 0 auto
+				font-size: 20px
+				font-weight: bolder
 
 
 
@@ -170,6 +172,7 @@ h2
 
 			h1
 				color: white
+				line-height: 1.5em
 			p
 				width: $contentWidth/2
 				font-size: 24px
@@ -217,27 +220,51 @@ h2
 				text-align: center
 
 
-$schedule_titleMaginTop: 60px
-$shedule_title_fontSize: 100px
+
+$scheduleContentHeight: 700px
+$schedule_titleMaginTop: 100px
+$schedule_title_fontSize: 100px
 $periodFontSize : 81px
 #schedule
 	background-color: $blueColor
 	.content
-		height: 600px
+		height: $scheduleContentHeight
 		#sheduleOutline
 			color: white
 			h1
 				margin-top: $schedule_titleMaginTop
 				color: white
-				font-size: $shedule_title_fontSize
+				font-size: $schedule_title_fontSize
 			p.period
-				margin-top: 600 / 2 - $periodFontSize/2 - $schedule_titleMaginTop - $shedule_title_fontSize //中央
+				margin-top: $scheduleContentHeight / 2 - $periodFontSize/2 - $schedule_titleMaginTop - $schedule_title_fontSize //中央
 				font-size: $periodFontSize
 				font-weight: bolder
 			img.calender
 				position: absolute
 				right: 0
-				top: (600px - 400) / 2  //中央
+				top: ($scheduleContentHeight - 400) / 2  //中央
+
+
+
+$costContentheight: 700px
+$costImageSize: 400px
+$costFontSize: 100px
+#cost
+	background-color: white
+	.content
+		height: $costContentheight
+		p
+			text-align: center
+			margin-top: $costContentheight/2 - $costImageSize/2
+			span, img
+				vertical-align: middle
+			span
+				margin-right: 80px
+				font-size: 100px
+				font-weight: bolder
+				color: $blueColor
+
+
 
 #photos
 	height: 10000px
@@ -245,6 +272,9 @@ $periodFontSize : 81px
 	background: url(../img/sparkles.gif),url(../img/bg-top.png),url(../img/bg-bottom.png)
 	background-position: top, top, bottom
 	background-repeat: repeat, repeat-x, repeat-x
+
+
+
 
 #prize
 	position: relative
@@ -257,11 +287,14 @@ $periodFontSize : 81px
 		position: absolute
 		bottom: 50px
 		width: 100%
-		margin: 20px auto
+		margin: 0px auto
 		text-align: center
 		font-size: 100px
 		font-weight: bolder
 		color: white
+
+
+
 
 
 $buttonSizeRatio: 4
