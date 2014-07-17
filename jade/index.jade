@@ -5,6 +5,7 @@ html
     link(href="css/lib/reset.css" rel="stylesheet" type="text/css")
     link(href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css")
     link(href="css/style.css" rel="stylesheet" type="text/css")
+    link(href="css/animation.css" rel="stylesheet" type="text/css")
     script(src='js/lib/jquery-2.1.1.min.js')
     script(src='js/lib/skrollr.min.js')
     script(src='js/lib/jquery-letterfx.min.js')
@@ -12,35 +13,40 @@ html
     script(src='js/main.js')
     script.
       $(document).ready(function(){
+        
         console.log("jqueary ready");
+        
         var skrlr = skrollr.init()
-        $("#topTitle1").css('opacity',1).letterfx({
-          fx:"fade swirl",
-          fx_duration:'500ms',
-          "backwards":false,
-          "timing":50,
-          "letter_end":"restore",
-          "element_end":"restore",
-          onLetterComplete:function(){
-            $("#topTitle2").css('opacity',1).letterfx({
-              fx:"fade swirl",
-              fx_duration:'400ms',
-              "backwards":false,
-              "timing":100,
-              "letter_end":"restore",
-              "element_end":"restore",
-              onLetterComplete:function(){
-                $("#topSubTitle").css('opacity',1).letterfx({
-                  fx:"fade swirl",
-                  fx_duration:'400ms',
-                  "backwards":false,
-                  "timing":100,
-                  "letter_end":"restore",
-                  "element_end":"restore"});
-              }
-            });
-          }
-          });
+
+
+        var fadeInTitleAnimation = function() {
+          $("#topTitle1").css('opacity',1).letterfx({
+            fx:"fade swirl",
+            fx_duration:'500ms',
+            "backwards":false,
+            "timing":50,
+            "letter_end":"restore",
+            "element_end":"restore",
+            onLetterComplete:function(){
+              $("#topTitle2").css('opacity',1).letterfx({
+                fx:"fade swirl",
+                fx_duration:'400ms',
+                "backwards":false,
+                "timing":100,
+                "letter_end":"restore",
+                "element_end":"restore",
+                onLetterComplete:function(){
+                  $("#topSubTitle").css('opacity',1).letterfx({
+                    fx:"fade swirl",
+                    fx_duration:'400ms',
+                    "backwards":false,
+                    "timing":100,
+                    "letter_end":"restore",
+                    "element_end":"restore"});
+                }
+              });}
+          });};
+          setTimeout(fadeInTitleAnimation,1000);
       });
 
 
@@ -49,7 +55,7 @@ html
     .page
 
       section#header
-        #headerBackground
+        #headerBackground.puffIn
         .content
           .title#topTitleBox
             h1#topTitle1 Swift Summer Camp
