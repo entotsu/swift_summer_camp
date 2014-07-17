@@ -75,58 +75,59 @@ h2 {
   right: 20px;
   text-align: right;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 /* line 87, ../../sass/style.sass */
 #header .content .title h1 {
   line-height: 1.25em;
   color: #14a6e2;
+  opacity: 0;
 }
-/* line 91, ../../sass/style.sass */
+/* line 92, ../../sass/style.sass */
 #header .content .title h2 {
   padding: 20px 0;
   color: #14a6e2;
+  opacity: 0;
 }
 
-/* line 103, ../../sass/style.sass */
+/* line 105, ../../sass/style.sass */
 #outline .header_angle {
   margin-bottom: -25px;
 }
-/* line 105, ../../sass/style.sass */
+/* line 107, ../../sass/style.sass */
 #outline .content_wrapper {
   background-color: #14a6e2;
 }
-/* line 107, ../../sass/style.sass */
+/* line 109, ../../sass/style.sass */
 #outline .content_wrapper .content {
   position: relative;
   z-index: 10;
   color: white;
 }
-/* line 111, ../../sass/style.sass */
+/* line 113, ../../sass/style.sass */
 #outline .content_wrapper .content h1 {
   color: white;
 }
-/* line 113, ../../sass/style.sass */
+/* line 115, ../../sass/style.sass */
 #outline .content_wrapper .content h2 {
   color: white;
   font-size: 30px;
   line-height: 1.75em;
   margin: 40px 0;
 }
-/* line 118, ../../sass/style.sass */
+/* line 120, ../../sass/style.sass */
 #outline .content_wrapper .content p {
   font-size: 12px;
   width: 300px;
   line-height: 1.75em;
 }
-/* line 122, ../../sass/style.sass */
+/* line 124, ../../sass/style.sass */
 #outline .content_wrapper .content img {
   position: absolute;
   top: 99px;
   right: 27px;
 }
 
-/* line 131, ../../sass/style.sass */
+/* line 133, ../../sass/style.sass */
 #swift {
   background: url(../img/swift_blur.jpg);
   background-size: cover;
@@ -134,7 +135,7 @@ h2 {
   margin-top: -188px;
   margin-bottom: -188px;
 }
-/* line 139, ../../sass/style.sass */
+/* line 141, ../../sass/style.sass */
 #swift .content .text {
   width: 60%;
   position: absolute;
@@ -143,12 +144,12 @@ h2 {
   text-align: left;
   color: white;
 }
-/* line 146, ../../sass/style.sass */
+/* line 148, ../../sass/style.sass */
 #swift .content .text h1 {
   line-height: 1.5em;
   color: white;
 }
-/* line 149, ../../sass/style.sass */
+/* line 151, ../../sass/style.sass */
 #swift .content .text p {
   margin: 20px 0 0 auto;
   line-height: 2em;
@@ -156,7 +157,7 @@ h2 {
   font-weight: bolder;
 }
 
-/* line 160, ../../sass/style.sass */
+/* line 162, ../../sass/style.sass */
 #aizu {
   background-image: url(../img/aizuLocation2.svg);
   background-size: cover;
@@ -165,17 +166,17 @@ h2 {
   position: relative;
   z-index: 10;
 }
-/* line 169, ../../sass/style.sass */
+/* line 171, ../../sass/style.sass */
 #aizu .content .text {
   margin-top: 20%;
   color: white;
 }
-/* line 173, ../../sass/style.sass */
+/* line 175, ../../sass/style.sass */
 #aizu .content .text h1 {
   color: white;
   line-height: 1.5em;
 }
-/* line 176, ../../sass/style.sass */
+/* line 178, ../../sass/style.sass */
 #aizu .content .text p {
   width: 450px;
   font-size: 24px;
@@ -183,55 +184,55 @@ h2 {
   margin-top: 40px;
 }
 
-/* line 185, ../../sass/style.sass */
+/* line 187, ../../sass/style.sass */
 #recruitment {
   background-image: url(../img/personsBlur3.jpg);
   background-size: cover;
   height: 900px;
 }
-/* line 189, ../../sass/style.sass */
+/* line 191, ../../sass/style.sass */
 #recruitment .content {
   margin-top: 188px;
 }
-/* line 191, ../../sass/style.sass */
+/* line 193, ../../sass/style.sass */
 #recruitment .content .title {
   text-align: right;
 }
-/* line 193, ../../sass/style.sass */
+/* line 195, ../../sass/style.sass */
 #recruitment .content .title h1 {
   display: inline;
   margin-top: 20px;
   font-size: 100px;
   color: white;
 }
-/* line 198, ../../sass/style.sass */
+/* line 200, ../../sass/style.sass */
 #recruitment .content .requirementList {
   width: 52%;
   margin-top: 80px;
 }
-/* line 201, ../../sass/style.sass */
+/* line 203, ../../sass/style.sass */
 #recruitment .content .requirementList ul {
   list-style-type: disc;
 }
-/* line 203, ../../sass/style.sass */
+/* line 205, ../../sass/style.sass */
 #recruitment .content .requirementList ul li {
   margin-top: 30px;
   color: white;
   font-weight: bolder;
   font-size: 32px;
 }
-/* line 208, ../../sass/style.sass */
+/* line 210, ../../sass/style.sass */
 #recruitment .content .persons {
   position: absolute;
   right: 0;
   top: 150px;
 }
-/* line 212, ../../sass/style.sass */
+/* line 214, ../../sass/style.sass */
 #recruitment .content .persons img {
   margin: 20px;
   opacity: 0.83;
 }
-/* line 215, ../../sass/style.sass */
+/* line 217, ../../sass/style.sass */
 #recruitment .content .persons .limitOfPerson {
   margin-top: 20px;
   color: white;
@@ -240,55 +241,55 @@ h2 {
   text-align: center;
 }
 
-/* line 228, ../../sass/style.sass */
+/* line 230, ../../sass/style.sass */
 #schedule {
   background-color: #14a6e2;
 }
-/* line 230, ../../sass/style.sass */
+/* line 232, ../../sass/style.sass */
 #schedule .content {
   height: 700px;
 }
-/* line 232, ../../sass/style.sass */
+/* line 234, ../../sass/style.sass */
 #schedule .content #sheduleOutline {
   color: white;
 }
-/* line 234, ../../sass/style.sass */
+/* line 236, ../../sass/style.sass */
 #schedule .content #sheduleOutline h1 {
   margin-top: 100px;
   color: white;
   font-size: 100px;
 }
-/* line 238, ../../sass/style.sass */
+/* line 240, ../../sass/style.sass */
 #schedule .content #sheduleOutline p.period {
   margin-top: 109.5px;
   font-size: 81px;
   font-weight: bolder;
 }
-/* line 242, ../../sass/style.sass */
+/* line 244, ../../sass/style.sass */
 #schedule .content #sheduleOutline img.calender {
   position: absolute;
   right: 0;
   top: 150px;
 }
 
-/* line 252, ../../sass/style.sass */
+/* line 254, ../../sass/style.sass */
 #cost {
   background-color: white;
 }
-/* line 254, ../../sass/style.sass */
+/* line 256, ../../sass/style.sass */
 #cost .content {
   height: 700px;
 }
-/* line 256, ../../sass/style.sass */
+/* line 258, ../../sass/style.sass */
 #cost .content p {
   text-align: center;
   margin-top: 150px;
 }
-/* line 259, ../../sass/style.sass */
+/* line 261, ../../sass/style.sass */
 #cost .content p span, #cost .content p img {
   vertical-align: middle;
 }
-/* line 261, ../../sass/style.sass */
+/* line 263, ../../sass/style.sass */
 #cost .content p span {
   margin-right: 80px;
   font-size: 100px;
@@ -296,7 +297,7 @@ h2 {
   color: #14a6e2;
 }
 
-/* line 269, ../../sass/style.sass */
+/* line 271, ../../sass/style.sass */
 #photos {
   height: 10000px;
   background: url(../img/sparkles.gif), url(../img/bg-top.png), url(../img/bg-bottom.png);
@@ -304,7 +305,7 @@ h2 {
   background-repeat: repeat, repeat-x, repeat-x;
 }
 
-/* line 279, ../../sass/style.sass */
+/* line 281, ../../sass/style.sass */
 #prize {
   position: relative;
   height: 1000px;
@@ -312,7 +313,7 @@ h2 {
   background-color: #00b9c1;
   margin: 0 auto;
 }
-/* line 286, ../../sass/style.sass */
+/* line 288, ../../sass/style.sass */
 #prize p {
   position: absolute;
   width: 100%;
@@ -323,22 +324,22 @@ h2 {
   color: white;
 }
 
-/* line 300, ../../sass/style.sass */
+/* line 302, ../../sass/style.sass */
 #applicationForm {
   background-color: #00b9c1;
   height: 1500px;
 }
-/* line 304, ../../sass/style.sass */
+/* line 306, ../../sass/style.sass */
 #applicationForm .content {
   text-align: center;
   width: 1000px;
 }
-/* line 307, ../../sass/style.sass */
+/* line 309, ../../sass/style.sass */
 #applicationForm .content img#finalMessage {
   margin: 0px auto 200px auto;
   display: block;
 }
-/* line 312, ../../sass/style.sass */
+/* line 314, ../../sass/style.sass */
 #applicationForm .ghostButton {
   border-radius: 24px;
   -moz-border-radius: 24px;

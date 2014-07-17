@@ -2,15 +2,45 @@
 <html>
   <head>
     <title></title>
-    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/lib/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="js/lib/jquery-2.1.1.min.js"></script>
     <script src="js/lib/skrollr.min.js"></script>
+    <script src="js/lib/jquery-letterfx.min.js"></script>
+    <script src="js/lib/tuxsudo.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-      $(function(){
-        console.log("jqieru");
+      $(document).ready(function(){
+        console.log("jqueary ready");
         var skrlr = skrollr.init()
+        $("#topTitle1").css('opacity',1).letterfx({
+          fx:"fade swirl",
+          fx_duration:'500ms',
+          "backwards":false,
+          "timing":50,
+          "letter_end":"restore",
+          "element_end":"restore",
+          onLetterComplete:function(){
+            $("#topTitle2").css('opacity',1).letterfx({
+              fx:"fade swirl",
+              fx_duration:'400ms',
+              "backwards":false,
+              "timing":100,
+              "letter_end":"restore",
+              "element_end":"restore",
+              onLetterComplete:function(){
+                $("#topSubTitle").css('opacity',1).letterfx({
+                  fx:"fade swirl",
+                  fx_duration:'400ms',
+                  "backwards":false,
+                  "timing":100,
+                  "letter_end":"restore",
+                  "element_end":"restore"});
+              }
+            });
+          }
+          });
       });
       
       
@@ -22,9 +52,10 @@
       <section id="header">
         <div id="headerBackground"></div>
         <div class="content">
-          <div class="title">
-            <h1>Swift Summer Camp<br>in Aizu</h1>
-            <h2>Swift漬けで会津をハックする10日間</h2>
+          <div id="topTitleBox" class="title">
+            <h1 id="topTitle1">Swift Summer Camp</h1>
+            <h1 id="topTitle2">in Aizu</h1>
+            <h2 id="topSubTitle">Swift漬けで会津をハックする10日間</h2>
           </div>
         </div>
       </section>
