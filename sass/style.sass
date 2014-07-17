@@ -8,11 +8,11 @@ $headerHeight: 800px
 
 $blueColor: #14a6e2
 
-//border
+//border  消したらバグるようになった・・
 section
-	border: 1px solid rgba(255,255,0,0.05)
+	border: 1px solid rgba(255,255,0,0.0)
 .content
-	border: 1px solid rgba(0,0,0,0.02)
+	border: 1px solid rgba(0,0,0,0.0)
 
 
 
@@ -279,13 +279,12 @@ $costFontSize: 100px
 #prize
 	position: relative
 
-	height: 550px
+	height: 1000px
 	background: url(../img/ipad.png) no-repeat
 	background-color: #00b9c1
 	margin: 0 auto
 	p
 		position: absolute
-		bottom: 50px
 		width: 100%
 		margin: 0px auto
 		text-align: center
@@ -306,7 +305,7 @@ $buttonSizeRatio: 4
 		text-align: center
 		width: 1000px
 		img#finalMessage
-			margin: 200px auto
+			margin: 0px auto 200px auto
 			display: block
 
 

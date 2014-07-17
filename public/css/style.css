@@ -1,11 +1,11 @@
 /* line 12, ../../sass/style.sass */
 section {
-  border: 1px solid rgba(255, 255, 0, 0.05);
+  border: 1px solid rgba(255, 255, 0, 0);
 }
 
 /* line 14, ../../sass/style.sass */
 .content {
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 @media screen and (max-width: 900px) {
@@ -307,7 +307,7 @@ h2 {
 /* line 279, ../../sass/style.sass */
 #prize {
   position: relative;
-  height: 550px;
+  height: 1000px;
   background: url(../img/ipad.png) no-repeat;
   background-color: #00b9c1;
   margin: 0 auto;
@@ -315,7 +315,6 @@ h2 {
 /* line 286, ../../sass/style.sass */
 #prize p {
   position: absolute;
-  bottom: 50px;
   width: 100%;
   margin: 0px auto;
   text-align: center;
@@ -324,22 +323,22 @@ h2 {
   color: white;
 }
 
-/* line 301, ../../sass/style.sass */
+/* line 300, ../../sass/style.sass */
 #applicationForm {
   background-color: #00b9c1;
   height: 1500px;
 }
-/* line 305, ../../sass/style.sass */
+/* line 304, ../../sass/style.sass */
 #applicationForm .content {
   text-align: center;
   width: 1000px;
 }
-/* line 308, ../../sass/style.sass */
+/* line 307, ../../sass/style.sass */
 #applicationForm .content img#finalMessage {
-  margin: 200px auto;
+  margin: 0px auto 200px auto;
   display: block;
 }
-/* line 313, ../../sass/style.sass */
+/* line 312, ../../sass/style.sass */
 #applicationForm .ghostButton {
   border-radius: 24px;
   -moz-border-radius: 24px;
