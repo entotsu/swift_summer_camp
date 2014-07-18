@@ -6,14 +6,16 @@ $widePageWidth: 2561px
 
 $headerHeight: 800px
 
+$angle_containerHeight: 188px
+
 $blueColor: #14a6e2
 $blueGreenColor: #00b9c1
 
 //border  消したらバグるようになった・・
 section
-	border: 1px solid rgba(255,255,0,0.0)
+	// border: 1px solid rgba(255,255,0,0.0)
 .content
-	border: 1px solid rgba(0,0,0,0.0)
+	// border: 1px solid rgba(0,0,0,0.0)
 
 
 
@@ -30,6 +32,9 @@ section
 		margin: 0 auto
 		width: $widePageWidth - 1
 		// overflow: hidden
+
+body
+	// background-color: $blueGreenColor
 
 .page
 	position: relative
@@ -135,15 +140,15 @@ h2
 	background: url(../img/swift_blur.jpg)
 	background-size: cover
 	min-height: 800px
-	margin-top: -188px
-	margin-bottom: -188px
+	margin-top: -$angle_containerHeight
+	margin-bottom: -$angle_containerHeight
 
 	.content
 		.text
 			width: 60%
 			position: absolute
 			right: 0%
-			margin-top: 188px + 20
+			margin-top: $angle_containerHeight + 20
 			text-align: left
 			color: white
 			h1
@@ -164,13 +169,13 @@ h2
 	background-image: url(../img/aizuLocation2.svg)
 	background-size: cover
 	height: 900px
-	margin-bottom: -188px
+	margin-bottom: -$angle_containerHeight
 	position: relative
 	z-index: 10
 
 	.content
+		padding-top: $angle_containerHeight
 		.text
-			margin-top: 20%
 			color: white
 
 			h1
@@ -190,7 +195,7 @@ h2
 	background-size: cover
 	height: 900px
 	.content
-		margin-top: 188px
+		padding-top: $angle_containerHeight
 		.title
 			text-align: right
 			h1
@@ -211,7 +216,7 @@ h2
 		.persons
 			position: absolute
 			right: 0
-			top: 150px
+			top: 150px + $angle_containerHeight
 			img
 				margin: 20px
 				opacity: 0.83
@@ -225,7 +230,7 @@ h2
 
 
 $scheduleContentHeight: 700px
-$schedule_titleMaginTop: 100px
+$schedule_titlePaddingTop: 100px
 $schedule_title_fontSize: 100px
 $periodFontSize : 81px
 #schedule
@@ -235,11 +240,11 @@ $periodFontSize : 81px
 		#sheduleOutline
 			color: white
 			h1
-				margin-top: $schedule_titleMaginTop
+				padding-top: $schedule_titlePaddingTop
 				color: white
 				font-size: $schedule_title_fontSize
 			p.period
-				margin-top: $scheduleContentHeight / 2 - $periodFontSize/2 - $schedule_titleMaginTop - $schedule_title_fontSize //中央
+				margin-top: $scheduleContentHeight / 2 - $periodFontSize/2 - $schedule_titlePaddingTop - $schedule_title_fontSize //中央
 				font-size: $periodFontSize
 				font-weight: bolder
 			img.calender
@@ -249,7 +254,7 @@ $periodFontSize : 81px
 
 
 
-$costContentheight: 700px
+$costContentheight: 500px
 $costImageSize: 400px
 $costFontSize: 100px
 #cost
@@ -258,7 +263,7 @@ $costFontSize: 100px
 		height: $costContentheight
 		p
 			text-align: center
-			margin-top: $costContentheight/2 - $costImageSize/2
+			padding-top: $costContentheight/2 - $costImageSize/2
 			span, img
 				vertical-align: middle
 			span
