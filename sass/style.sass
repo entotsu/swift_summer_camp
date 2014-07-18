@@ -9,6 +9,8 @@ $headerHeight: 800px
 $blueColor: #14a6e2
 $blueGreenColor: #00b9c1
 
+$movingUpDistance: 400px
+
 //border  消したらバグるようになった・・
 section
 	border: 1px solid rgba(255,255,0,0.0)
@@ -48,6 +50,7 @@ section .content
 
 
 
+
 // Entire Setting ----------------------
 
 h1
@@ -58,6 +61,10 @@ h2
 	color: #3f3f3f
 
 // -------------------------------------
+
+
+
+
 
 
 
@@ -103,14 +110,22 @@ h2
 
 
 #outline
-	.header_angle
-		margin-bottom: -25px
+	position: relative
+
+	.angle_container
+		position: relative
+		z-index: 5
+		.header_angle
+			margin-bottom: -25px
+
 	.content_wrapper
 		background-color: $blueColor
 		.content
 			position: relative
 			z-index: 10
 			color: white
+			margin-top: -50px
+			margin-bottom: -50px
 			h1
 				color: white
 			h2
@@ -134,8 +149,8 @@ h2
 #swift
 	background: url(../img/swift_blur.jpg)
 	background-size: cover
-	min-height: 800px
-	margin-top: -188px
+	min-height: 900px
+	margin-top: -188px - ($movingUpDistance)
 	margin-bottom: -188px
 
 	.content
@@ -189,6 +204,7 @@ h2
 	background-image: url(../img/personsBlur3.jpg)
 	background-size: cover
 	height: 900px
+	margin-top: -($movingUpDistance*2)
 	.content
 		margin-top: 188px
 		.title
@@ -312,28 +328,31 @@ $buttonSizeRatio: 4
 			display: block
 
 
-	.ghostButton
-		border-radius: 6px * $buttonSizeRatio
-		-moz-border-radius: 6px * $buttonSizeRatio
-		-webkit-border-radius: 6px * $buttonSizeRatio
-		padding: (18px * $buttonSizeRatio) (30px * $buttonSizeRatio)
-		font-family: "proxima-nova",Helvetica,Arial,sans-serif
-		font-weight: 700
-		font-size: 16px * $buttonSizeRatio
-		line-height: normal
-		color: #fff
-		border: (2px * $buttonSizeRatio) solid #fff
-		text-align: center
-		background: rgba(0,0,0,0)
-		letter-spacing: (2px * $buttonSizeRatio)
-		text-transform: uppercase
-		display: inline-block
-		box-shadow: none
-		-webkit-box-shadow: none
-		transition: all .5s ease-in
-		-webkit-transition: all .5s ease-in
-		-moz-transition: all .5s ease-in
-		-ms-transition: all .5s ease-in
-		-o-transition: all .5s ease-in
+
+
+
+.ghostButton
+	border-radius: 6px * $buttonSizeRatio
+	-moz-border-radius: 6px * $buttonSizeRatio
+	-webkit-border-radius: 6px * $buttonSizeRatio
+	padding: (18px * $buttonSizeRatio) (30px * $buttonSizeRatio)
+	font-family: "proxima-nova",Helvetica,Arial,sans-serif
+	font-weight: 700
+	font-size: 16px * $buttonSizeRatio
+	line-height: normal
+	color: #fff
+	border: (2px * $buttonSizeRatio) solid #fff
+	text-align: center
+	background: rgba(0,0,0,0)
+	letter-spacing: (2px * $buttonSizeRatio)
+	text-transform: uppercase
+	display: inline-block
+	box-shadow: none
+	-webkit-box-shadow: none
+	transition: all .5s ease-in
+	-webkit-transition: all .5s ease-in
+	-moz-transition: all .5s ease-in
+	-ms-transition: all .5s ease-in
+	-o-transition: all .5s ease-in
 
 		

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>会津Swift合宿 2014</title>
     <link href="css/lib/reset.css" rel="stylesheet" type="text/css">
     <link href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -45,10 +45,19 @@
                     "element_end":"restore"});
                 }
               });}
-          });};
-          setTimeout(fadeInTitleAnimation,1000);
+          });
+        };
+        setTimeout(fadeInTitleAnimation,1000);
+        
+        
+        var debugArea = document.getElementById('debagArea');
+        console.log(debagArea);
+        if(debagArea) {
+          window.onscroll = function() {
+            debugArea.innerHTML = document.documentElement.scrollTop || document.body.scrollTop;
+          }
+        }
       });
-      
       
       
     </script>
@@ -65,7 +74,7 @@
           </div>
         </div>
       </section>
-      <section id="outline">
+      <section id="outline" data-0="top:0px;" data-1200="top:-600px;" style="top:0px;">
         <div id="angleHeader1" class="angle_container">
           <div class="header_angle angle">
             <svg height="250" version="1.1" width="2560" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: 0.5px;">
@@ -88,7 +97,7 @@
           </div>
         </div>
       </section>
-      <section id="swift">
+      <section id="swift" data-350="background-position: 50% -300px;" data-1700="background-position: 50% 400px;" style="background-position: 50% -300px;">
         <div class="content">
           <div class="text">
             <h1>この夏、Swiftを<br>マスターしよう。</h1>
@@ -96,7 +105,7 @@
           </div><img id="swiftImg">
         </div>
       </section>
-      <section id="aizu">
+      <section id="aizu" data-620="top:100px;" data-2500="top:-1200px;" style="top:100px;">
         <div class="content">
           <div class="text">
             <h1>会津を観光しよう。<br>役に立つアプリを作ろう。</h1>
@@ -104,7 +113,7 @@
           </div><img id="aizuImg">
         </div>
       </section>
-      <section id="recruitment">
+      <section id="recruitment" data-1450="background-position: 50% -200px;" data-3100="background-position: 50% 1000px;" style="background-position: 50% -200px;">
         <div class="content">
           <div class="title">
             <h1>募集要項</h1>
@@ -158,5 +167,6 @@
       </section>
       <section id="fottter"></section>
     </div>
+    <div id="debagArea" style="position:fixed;top:5%;right:5%;z-index:999;background-color:rgba(255,255,255,0.3)"></div>
   </body>
 </html>

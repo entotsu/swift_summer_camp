@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title= pageTitle
+    title 会津Swift合宿 2014
     link(href="css/lib/reset.css" rel="stylesheet" type="text/css")
     link(href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css")
     link(href="css/style.css" rel="stylesheet" type="text/css")
@@ -45,10 +45,19 @@ html
                     "element_end":"restore"});
                 }
               });}
-          });};
-          setTimeout(fadeInTitleAnimation,1000);
-      });
+          });
+        };
+        setTimeout(fadeInTitleAnimation,1000);
 
+
+        var debugArea = document.getElementById('debagArea');
+        console.log(debagArea);
+        if(debagArea) {
+          window.onscroll = function() {
+            debugArea.innerHTML = document.documentElement.scrollTop || document.body.scrollTop;
+          }
+        }
+      });
 
 
   body
@@ -62,14 +71,12 @@ html
             h1#topTitle2 in Aizu
             h2#topSubTitle Swift漬けで会津をハックする10日間
 
-      section#outline
+
+      section#outline(data-0="top:0px;", data-1200="top:-600px;", style="top:0px;")
         .angle_container#angleHeader1
           .header_angle.angle
             svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative; left: 0.5px;')
-                //- desc(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
-                //- defs(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
                 path(fill='#14a6e2', stroke='none', d='M0,0L2560,250L0,250Z', style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
-
           img.headerImg
         .content_wrapper
           .content
@@ -80,26 +87,26 @@ html
         .angle_container#angleFooter1
           .footer_angle.angle
             svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative;')
-                //- desc(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
-                //- defs(style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
                 path(fill='#14a6e2', stroke='none', d='M0,0L2560,0L0,250Z', style='-webkit-tap-highlight-color: rgba(0, 0, 0, 0);')
 
 
-      section#swift
+      section#swift(data-350="background-position: 50% -300px;", data-1700="background-position: 50% 400px;", style="background-position: 50% -300px;")
         .content
           .text
             h1 この夏、Swiftを<br>マスターしよう。
             p SwiftはiOSやMacのアプリを作るための新しい開発言語。<br>6/5のWWDC2014にて発表されて以来、現在一番盛り上がっている言語の１つです。<br>この夏、この合宿に参加してSwiftでアプリを作ろう！
           img#swiftImg
 
-      section#aizu
+
+      section#aizu(data-620="top:100px;", data-2500="top:-1200px;", style="top:100px;")
         .content
           .text
             h1 会津を観光しよう。<br>役に立つアプリを作ろう。
             p 東北の修学旅行といえば会津！会津は歴史的に由緒ある町です。<br>また、3.11の震災以降、現在も多くの被災者が仮設住宅に避難されている町でもあります。
           img#aizuImg
 
-      section#recruitment
+
+      section#recruitment(data-1450="background-position: 50% -200px;", data-3100="background-position: 50% 1000px;", style="background-position: 50% -200px;")
         .content
           .title
             h1 募集要項
@@ -147,7 +154,6 @@ html
             img.freeImg(src='img/free2.png')
 
 
-
       section#photos
         .content
           img.photos
@@ -173,6 +179,8 @@ html
 
       section#fottter
 
+
+    #debagArea(style="position:fixed;top:5%;right:5%;z-index:999;background-color:rgba(255,255,255,0.3)")
 
 
 
