@@ -76,22 +76,21 @@
 
 
 .puffIn
+  +vPrefix(transform-origin, 50% 50%)
   +animationName(puffIn)
-  +animation-duration(0.8s)
+  +animation-duration(2.75s)
   +animation-iteration-count(1)
 
 
 +keyframes(puffIn)
   0%
-    opacity: 0
-    +vPrefix(transform-origin, 50% 50%)
+    // opacity: 0
     +vPrefix(transform, scale(2,2))
-    +vPrefix(filter, blur(2px))
+    // +vPrefix(filter, blur(2px))
   100%
-    opacity: 1
-    +vPrefix(transform-origin, 50% 50%)
+    // opacity: 1
     +vPrefix(transform, scale(1,1))
-    +vPrefix(filter, blur(0px))
+    // +vPrefix(filter, blur(0px))
 
 
 
