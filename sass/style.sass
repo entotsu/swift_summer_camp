@@ -11,29 +11,20 @@ $angle_containerHeight: 188px
 $blueColor: #14a6e2
 $blueGreenColor: #00b9c1
 
-//border  消したらバグるようになった・・
-section
-	// border: 1px solid rgba(255,255,0,0.0)
-.content
-	// border: 1px solid rgba(0,0,0,0.0)
-
-
+$outlineMovingDistance: 600px
 
 
 // STRUCTURE --------------------------
-
 @media screen and (max-width:$contentWidth)
 	.page
 		width: $contentWidth
-		// overflow: hidden
 
 @media screen and (min-width:$widePageWidth)
 	.page
 		margin: 0 auto
 		width: $widePageWidth - 1
-		// overflow: hidden
 
-body
+// body
 	// background-color: $blueGreenColor
 
 .page
@@ -46,30 +37,24 @@ section .content
 
 .angle_container
 	overflow: hidden
-
-
 // -------------------------------------
 
 
 
 
 // Entire Setting ----------------------
-
 h1
 	font-size: 60px
-	color: black
 h2
 	font-size: 25px
-	color: #3f3f3f
-
 // -------------------------------------
+
 
 
 
 #header
 	height: $headerHeight
 	margin-bottom: -220px
-
 	#headerBackground
 		height: $headerHeight
 		width: 100%
@@ -78,10 +63,9 @@ h2
 		background-size: cover
 		position: absolute
 		z-index: -1
-
 	.content
 		height: $headerHeight
-
+		color: $blueColor
 		.title
 			position: absolute
 			top: 100px
@@ -89,25 +73,18 @@ h2
 			text-align: right
 			padding: 20px
 			// background-color: rgba(white,0.5)
-
 			h1
 				line-height: 1.25em
-				color: $blueColor
 				opacity: 0
-
 			h2
 				padding: 20px 0
-				color: $blueColor
 				opacity: 0
-
-
-
-
 
 
 
 
 #outline
+	margin-bottom: -($outlineMovingDistance)
 	.header_angle
 		margin-bottom: -25px
 	.content_wrapper
@@ -116,13 +93,10 @@ h2
 			position: relative
 			z-index: 10
 			color: white
-			h1
-				color: white
 			h2
-				color: white
+				margin: 40px 0
 				font-size: 30px
 				line-height: 1.75em
-				margin: 40px 0
 			p
 				font-size: 12px
 				width: $contentWidth/3
@@ -140,20 +114,16 @@ h2
 	background: url(../img/swift_blur.jpg)
 	background-size: cover
 	min-height: 800px
-	margin-top: -$angle_containerHeight
-	margin-bottom: -$angle_containerHeight
-
 	.content
 		.text
-			width: 60%
 			position: absolute
 			right: 0%
 			margin-top: $angle_containerHeight + 20
+			width: 60%
 			text-align: left
 			color: white
 			h1
 				line-height: 1.5em
-				color: white
 			p
 				margin: 20px 0 0 auto
 				line-height: 2em
@@ -166,26 +136,22 @@ h2
 
 
 #aizu
-	background-image: url(../img/aizuLocation2.svg)
+	background-image: url(../img/aizuMapRect2.svg)
 	background-size: cover
-	height: 900px
-	margin-bottom: -$angle_containerHeight
+	height: 750px
 	position: relative
 	z-index: 10
-
 	.content
-		padding-top: $angle_containerHeight
+		padding-top: $angle_containerHeight/2
 		.text
 			color: white
-
 			h1
-				color: white
 				line-height: 1.5em
 			p
 				width: $contentWidth/2
+				margin-top: 40px
 				font-size: 24px
 				line-height: 2em
-				margin-top: 40px
 
 
 
@@ -195,7 +161,7 @@ h2
 	background-size: cover
 	height: 900px
 	.content
-		padding-top: $angle_containerHeight
+		padding-top: 100px
 		.title
 			text-align: right
 			h1
@@ -216,7 +182,7 @@ h2
 		.persons
 			position: absolute
 			right: 0
-			top: 150px + $angle_containerHeight
+			top: 275px
 			img
 				margin: 20px
 				opacity: 0.83
