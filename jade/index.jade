@@ -62,7 +62,7 @@ html
             h1#topTitle2 in Aizu
             h2#topSubTitle Swift漬けで会津をハックする10日間
 
-      section#outline( style="position:relative;top:0px;", data-0="top:0px;", data-1200="top:-600px;")
+      section#outline( style="position:relative;top:-200px;", data-0="top:-200px;", data-1200="top:-800px;")
         .angle_container#angleHeader1
           .header_angle.angle
             svg(height='250', version='1.1', width='2560', xmlns='http://www.w3.org/2000/svg', style='overflow: hidden; position: relative; left: 0.5px;')
@@ -80,6 +80,16 @@ html
                 path(fill='#14a6e2', stroke='none', d='M0,0L2560,0L0,250Z')
 
 
+      section#aizu
+        .content
+          .text
+            h1 会津を観光しよう。<br>役に立つアプリを<br>作ろう。
+            p 東北の修学旅行といえば会津！<br>会津は歴史的に由緒ある町です。<br>また、3.11の震災以降、現在も多くの被災者が仮設住宅に避難されている町でもあります。
+        .map
+          img#aizuImg(src="img/fukusimaMap.png")
+
+
+
       section#swift
         .content
           .text
@@ -87,12 +97,39 @@ html
             p SwiftはiOSやMacのアプリを作るための新しい開発言語。<br>6/5のWWDC2014にて発表されて以来、現在一番盛り上がっている言語の１つです。<br>この夏、この合宿に参加してSwiftでアプリを作ろう！
           img#swiftImg
 
-      section#aizu
+
+      section#MushUpAwards
         .content
           .text
-            h1 会津を観光しよう。<br>役に立つアプリを作ろう。
-            p 東北の修学旅行といえば会津！会津は歴史的に由緒ある町です。<br>また、3.11の震災以降、現在も多くの被災者が仮設住宅に避難されている町でもあります。
-          img#aizuImg
+            h1 創ったアプリを、<br>MushUpAwardsに応募しよう！
+            p MushUpAwardsは、毎年開催されている、国内最大級のWebサービスのコンテストです。毎年10月中旬に審査があり、数多くの賞が用意されています。
+          img#swiftImg
+
+
+
+      section#schedule
+        .content
+          //-カルーセルのライブラリ使うべきだな
+          .scheduleItem#sheduleOutline
+            h1 日程
+            p.period 9/1 ~ 9/10
+            img.calender(src='img/sep1.png')
+
+          .scheduleItem#shedule1
+          .scheduleItem#shedule2
+          .scheduleItem#shedule3
+          .scheduleItem#shedule4
+          .scheduleItem#shedule5
+
+
+      section#cost
+        .content
+          h1 参加費
+          img.freeImg(src='img/free.png')
+          //- p
+            span 参加費
+
+
 
       section#recruitment
         .content
@@ -118,28 +155,6 @@ html
               img.person(src="img/person_white.png")
               img.person(src="img/person_white.png")
             p.limitOfPerson 6名
-
-
-      section#schedule
-        .content
-          //-カルーセルのライブラリ使うべきだな
-          .scheduleItem#sheduleOutline
-            h1 日程
-            p.period 9/1 ~ 9/10
-            img.calender(src='img/sep1.png')
-
-          .scheduleItem#shedule1
-          .scheduleItem#shedule2
-          .scheduleItem#shedule3
-          .scheduleItem#shedule4
-          .scheduleItem#shedule5
-
-
-      section#cost
-        .content
-          p
-            span 参加費
-            img.freeImg(src='img/free2.png')
 
 
 
