@@ -11,16 +11,17 @@ $angle_containerHeight: 188px
 $blueColor: #14a6e2
 $blueGreenColor: #00b9c1
 
-//border
-// section
-// 	border: 1px solid rgba(255,255,0,0.0)
-// .content
-// 	border: 1px solid rgba(0,0,0,0.0)
+//border  消したらバグるようになった・・
+section
+	// border: 1px solid rgba(255,255,0,0.0)
+.content
+	// border: 1px solid rgba(0,0,0,0.0)
 
 
 
 
 // STRUCTURE --------------------------
+
 @media screen and (max-width:$contentWidth)
 	.page
 		width: $contentWidth
@@ -45,28 +46,30 @@ section .content
 
 .angle_container
 	overflow: hidden
+
+
 // -------------------------------------
-
-
 
 
 
 
 // Entire Setting ----------------------
+
 h1
 	font-size: 60px
+	color: black
 h2
 	font-size: 25px
+	color: #3f3f3f
+
 // -------------------------------------
-
-
 
 
 
 #header
 	height: $headerHeight
 	margin-bottom: -220px
-	color: $blueColor
+
 	#headerBackground
 		height: $headerHeight
 		width: 100%
@@ -75,50 +78,71 @@ h2
 		background-size: cover
 		position: absolute
 		z-index: -1
+
 	.content
 		height: $headerHeight
+
 		.title
 			position: absolute
 			top: 100px
 			right: 20px
 			text-align: right
 			padding: 20px
+			// background-color: rgba(white,0.5)
+
 			h1
 				line-height: 1.25em
+				color: $blueColor
 				opacity: 0
+
 			h2
 				padding: 20px 0
+				color: $blueColor
 				opacity: 0
 
 
 
-#aizu
-	height: 900px
-	margin-bottom: -$angle_containerHeight
-	position: relative
-	z-index: 10
-	background-image: url(../img/aizuLocation2.svg)
-	background-size: cover
-	.content
-		padding-top: $angle_containerHeight
-		.text
+
+
+
+
+
+#outline
+	.header_angle
+		margin-bottom: -25px
+	.content_wrapper
+		background-color: $blueColor
+		.content
+			position: relative
+			z-index: 10
 			color: white
 			h1
 				color: white
-				line-height: 1.5em
+			h2
+				color: white
+				font-size: 30px
+				line-height: 1.75em
+				margin: 40px 0
 			p
-				line-height: 2em
-				margin-top: 40px
-				width: $contentWidth/2
-				font-size: 24px
+				font-size: 12px
+				width: $contentWidth/3
+				line-height: 1.75em
+			img
+				position: absolute
+				top: 99px
+				right: 27px
+
+
 
 
 
 #swift
-	min-height: 800px
-	margin-top: -$angle_containerHeight * 3
 	background: url(../img/swift_blur.jpg)
 	background-size: cover
+	min-height: 800px
+	margin-top: -$angle_containerHeight
+	margin-bottom: -$angle_containerHeight
+
 	.content
 		.text
 			width: 60%
@@ -129,6 +153,7 @@ h2
 			color: white
 			h1
 				line-height: 1.5em
+				color: white
 			p
 				margin: 20px 0 0 auto
 				line-height: 2em
@@ -139,39 +164,28 @@ h2
 
 
 
-#outline
-	background-color: $blueColor
+
+#aizu
+	background-image: url(../img/aizuLocation2.svg)
+	background-size: cover
+	height: 900px
+	margin-bottom: -$angle_containerHeight
+	position: relative
+	z-index: 10
+
 	.content
 		padding-top: $angle_containerHeight
-		padding-bottom: $angle_containerHeight
 		.text
 			color: white
+
 			h1
 				color: white
-			h2
-				margin: 40px 0
-				font-size: 30px
-				line-height: 1.75em
-				color: white
+				line-height: 1.5em
 			p
-				width: $contentWidth/3
-				font-size: 12px
-				line-height: 1.75em
-				color: white
-		img
-			position: absolute
-			top: 40%
-			right: 5%
-
-
-
-
-
-
-
-
-
-
+				width: $contentWidth/2
+				font-size: 24px
+				line-height: 2em
+				margin-top: 40px
 
 
 
@@ -182,13 +196,13 @@ h2
 	height: 900px
 	.content
 		padding-top: $angle_containerHeight
-		color: white
 		.title
 			text-align: right
 			h1
 				display: inline
 				margin-top: 20px
 				font-size: 100px
+				color: white
 		.requirementList
 			width: 52%
 			margin-top: 80px
@@ -196,6 +210,7 @@ h2
 				list-style-type: disc
 				li
 					margin-top: 30px
+					color: white
 					font-weight: bolder
 					font-size: 32px
 		.persons
@@ -207,6 +222,7 @@ h2
 				opacity: 0.83
 			.limitOfPerson
 				margin-top: 20px
+				color: white
 				font-size: 100px
 				font-weight: bolder
 				text-align: center
