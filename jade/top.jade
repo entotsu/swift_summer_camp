@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= pageTitle
+    link(href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css")
+    link(href="css/style.css" rel="stylesheet" type="text/css")
+    link(href="css/animation.css" rel="stylesheet" type="text/css")
+    script(src='js/lib/jquery-2.1.1.min.js')
+    script(src='js/lib/skrollr.min.js')
+    script(src='js/lib/jquery-letterfx.min.js')
+    script(src='js/lib/tuxsudo.min.js')
+    script(src='js/main.js')
+
+
+body
+    .page
+
+      section#header
+        #headerBackground.zoomOut
+        .content
+
+            span#top_date 2012/09/01 <span id="hyphen">−</span> 2012/09/01
+
+            #top_swift_x_aizu
+                .top_icons#top_swift
+                    //- TODO Resize after
+                    img(src="img/top_swift.png")
+                    p Swift
+                #top_x ×
+                .top_icons#top_aizu
+                    //- TODO Resize after
+                    img(src="img/top_aizu.png")
+                    p Aizu
+            #top_title
+                h1 Swift Summer Camp in Aizu
