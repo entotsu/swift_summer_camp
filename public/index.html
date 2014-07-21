@@ -2,7 +2,6 @@
 <html>
   <head>
     <title></title>
-    <link href="css/lib/reset.css" rel="stylesheet" type="text/css">
     <link href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/animation.css" rel="stylesheet" type="text/css">
@@ -16,38 +15,43 @@
       
         console.log("jqueary ready");
         
-        var skrlr = skrollr.init()
+        var skrlr = skrollr.init();
         
-        
-        var fadeInTitleAnimation = function() {
-          $("#topTitle1").css('opacity',1).letterfx({
-            fx:"fade swirl",
-            fx_duration:'500ms',
-            "backwards":false,
-            "timing":50,
-            "letter_end":"restore",
-            "element_end":"restore",
-            onLetterComplete:function(){
-              $("#topTitle2").css('opacity',1).letterfx({
-                fx:"fade swirl",
-                fx_duration:'400ms',
-                "backwards":false,
-                "timing":100,
-                "letter_end":"restore",
-                "element_end":"restore",
-                onLetterComplete:function(){
-                  $("#topSubTitle").css('opacity',1).letterfx({
-                    fx:"fade swirl",
-                    fx_duration:'400ms',
-                    "backwards":false,
-                    "timing":100,
-                    "letter_end":"restore",
-                    "element_end":"restore"});
-                }
-              });}
-          });};
-          setTimeout(fadeInTitleAnimation,1000);
+        //- var fadeInTitleAnimation = function() {
+        //-   $("#topTitle1").css('opacity',1).letterfx({
+        //-     fx:"fade swirl",
+        //-     fx_duration:'500ms',
+        //-     "backwards":false,
+        //-     "timing":50,
+        //-     "letter_end":"restore",
+        //-     "element_end":"restore",
+        //-     onLetterComplete:function(){
+        //-       $("#topTitle2").css('opacity',1).letterfx({
+        //-         fx:"fade swirl",
+        //-         fx_duration:'400ms',
+        //-         "backwards":false,
+        //-         "timing":100,
+        //-         "letter_end":"restore",
+        //-         "element_end":"restore",
+        //-         onLetterComplete:function(){
+        //-           $("#topSubTitle").css('opacity',1).letterfx({
+        //-             fx:"fade swirl",
+        //-             fx_duration:'400ms',
+        //-             "backwards":false,
+        //-             "timing":100,
+        //-             "letter_end":"restore",
+        //-             "element_end":"restore"});
+        //-         }
+        //-       });}
+        //-   });};
+          //- setTimeout(fadeInTitleAnimation,1000);
       });
+      
+      
+      
+      
+      
+      
       
       
       
@@ -56,7 +60,7 @@
   <body>
     <div class="page">
       <section id="header">
-        <div id="headerBackground" class="puffIn"></div>
+        <div id="headerBackground" class="zoomOut"></div>
         <div class="content">
           <div id="topTitleBox" class="title">
             <h1 id="topTitle1">Swift Summer Camp</h1>
@@ -91,7 +95,7 @@
       <section id="aizu">
         <div class="content">
           <div class="text">
-            <h1>会津を観光しよう。<br>役に立つアプリを<br>作ろう。</h1>
+            <h1>会津を観光しよう。<br>役立つアプリを<br>作ろう。</h1>
             <p>東北の修学旅行といえば会津！<br>会津は歴史的に由緒ある町です。<br>また、3.11の震災以降、現在も多くの被災者が仮設住宅に避難されている町でもあります。</p>
           </div>
         </div>

@@ -2,7 +2,6 @@ doctype html
 html
   head
     title= pageTitle
-    link(href="css/lib/reset.css" rel="stylesheet" type="text/css")
     link(href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css")
     link(href="css/style.css" rel="stylesheet" type="text/css")
     link(href="css/animation.css" rel="stylesheet" type="text/css")
@@ -16,38 +15,43 @@ html
         
         console.log("jqueary ready");
         
-        var skrlr = skrollr.init()
+        var skrlr = skrollr.init();
 
-
-        var fadeInTitleAnimation = function() {
-          $("#topTitle1").css('opacity',1).letterfx({
-            fx:"fade swirl",
-            fx_duration:'500ms',
-            "backwards":false,
-            "timing":50,
-            "letter_end":"restore",
-            "element_end":"restore",
-            onLetterComplete:function(){
-              $("#topTitle2").css('opacity',1).letterfx({
-                fx:"fade swirl",
-                fx_duration:'400ms',
-                "backwards":false,
-                "timing":100,
-                "letter_end":"restore",
-                "element_end":"restore",
-                onLetterComplete:function(){
-                  $("#topSubTitle").css('opacity',1).letterfx({
-                    fx:"fade swirl",
-                    fx_duration:'400ms',
-                    "backwards":false,
-                    "timing":100,
-                    "letter_end":"restore",
-                    "element_end":"restore"});
-                }
-              });}
-          });};
-          setTimeout(fadeInTitleAnimation,1000);
+        //- var fadeInTitleAnimation = function() {
+        //-   $("#topTitle1").css('opacity',1).letterfx({
+        //-     fx:"fade swirl",
+        //-     fx_duration:'500ms',
+        //-     "backwards":false,
+        //-     "timing":50,
+        //-     "letter_end":"restore",
+        //-     "element_end":"restore",
+        //-     onLetterComplete:function(){
+        //-       $("#topTitle2").css('opacity',1).letterfx({
+        //-         fx:"fade swirl",
+        //-         fx_duration:'400ms',
+        //-         "backwards":false,
+        //-         "timing":100,
+        //-         "letter_end":"restore",
+        //-         "element_end":"restore",
+        //-         onLetterComplete:function(){
+        //-           $("#topSubTitle").css('opacity',1).letterfx({
+        //-             fx:"fade swirl",
+        //-             fx_duration:'400ms',
+        //-             "backwards":false,
+        //-             "timing":100,
+        //-             "letter_end":"restore",
+        //-             "element_end":"restore"});
+        //-         }
+        //-       });}
+        //-   });};
+          //- setTimeout(fadeInTitleAnimation,1000);
       });
+
+
+
+
+
+
 
 
 
@@ -55,7 +59,7 @@ html
     .page
 
       section#header
-        #headerBackground.puffIn
+        #headerBackground.zoomOut
         .content
           .title#topTitleBox
             h1#topTitle1 Swift Summer Camp
@@ -83,7 +87,7 @@ html
       section#aizu
         .content
           .text
-            h1 会津を観光しよう。<br>役に立つアプリを<br>作ろう。
+            h1 会津を観光しよう。<br>役立つアプリを<br>作ろう。
             p 東北の修学旅行といえば会津！<br>会津は歴史的に由緒ある町です。<br>また、3.11の震災以降、現在も多くの被災者が仮設住宅に避難されている町でもあります。
         .map
           img#aizuImg(src="img/fukusimaMap.png")

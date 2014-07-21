@@ -1,4 +1,5 @@
 
+@import "compass"
 
 =animationName($name...)
   -o-animation-name: $name
@@ -67,30 +68,39 @@
   animation: $animation
 
 
-=vPrefix($name, $argument)
-  -webkit-#{$name}: #{$argument}
-  -ms-#{$name}: #{$argument}
-  -moz-#{$name}: #{$argument}
-  -o-#{$name}: #{$argument}
-  #{$name}: #{$argument}
+
++keyframes(zoomOut)
+  0%
+    +transform(scale(2,2))
+  100%
+    +transform(scale(1,1))
 
 
-.puffIn
-  +vPrefix(transform-origin, 50% 50%)
-  +animationName(puffIn)
+
++keyframes(huerotator)
+  0%
+    +filter(hue-rotate(0deg))
+  100%
+    +filter(hue-rotate(360deg))
+
+
+
+
+
+.zoomOut
+  +transform-origin(50% 50%)
+  +animationName(zoomOut)
   +animation-duration(2.75s)
   +animation-iteration-count(1)
 
+.hueRotator
+  background: #a6d900
+  +background(linear-gradient(to bottom, #a6d900 0%, #ff4454 100%))
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6d900', endColorstr='#ff4454', GradientType=0)
+  opacity: 0.6
+  +transition(opacity 1.5s)
+  +animation(huerotator 3s infinite alternate)
 
-+keyframes(puffIn)
-  0%
-    // opacity: 0
-    +vPrefix(transform, scale(2,2))
-    // +vPrefix(filter, blur(2px))
-  100%
-    // opacity: 1
-    +vPrefix(transform, scale(1,1))
-    // +vPrefix(filter, blur(0px))
 
 
 

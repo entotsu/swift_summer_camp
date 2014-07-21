@@ -1,4 +1,32 @@
 
+@import "compass/reset"
+@import "compass"
+
+=position($position, $args)
+	position: $position
+	$offsets: top right bottom left
+	@each $o in $offsets
+		$i: index($args, $o)
+		@if $i and $i + 1 <= length($args) and type-of( nth($args, $i + 1) ) == number
+			#{$o}: nth($args, $i + 1)
+
+
+
+=absolute($args)
+	@include position(absolute, $args)
+
+
+=fixed($args)
+	@include position(fixed, $args)
+
+
+=relative($args)
+	@include position(relative, $args)
+
+
+=test_border($color)
+	border: 1px solid $color
+
 
 
 $contentWidth: 900px
@@ -48,9 +76,16 @@ section .content
 // Entire Setting ----------------------
 h1
 	font-size: 60px
+	font-weight: bolder
 h2
 	font-size: 25px
 // -------------------------------------
+
+
+
+
+
+
 
 
 
@@ -60,26 +95,71 @@ h2
 	#headerBackground
 		height: $headerHeight
 		width: 100%
-		background: url(../img/blurMac.jpg)
-		background-size: cover
 		position: absolute
 		z-index: -1
 	.content
 		height: $headerHeight
 		color: $blueColor
-		.title
-			position: absolute
-			top: 100px
-			right: 20px
-			text-align: right
-			padding: 20px
-			// background-color: rgba(white,0.5)
-			h1
-				line-height: 1.25em
-				opacity: 0
-			h2
-				padding: 20px 0
-				opacity: 0
+
+		span#top_date
+			display: block
+			margin: 80px 0
+			font-size: 40px
+			font-family: Helvetica Neue
+			font-weight: 100
+			text-align: center
+			letter-spacing: 3px
+			// +test_border(red)
+			#hyphen
+				font-size: 50px
+				// margin: 0 5px
+
+		#top_swift_x_aizu// TODO もっとシンプルなCSSにする
+			// +test_border(blue)
+			text-align: center
+
+			>div
+				display: inline-block
+				position: relative
+				// +test_border(red)
+				font-family: Helvetica Neue
+			.top_icons
+				width: 250px
+				text-align: center
+				img
+					position: relative
+					display: block
+					height: 200px
+					margin: 0 auto
+				p
+					text-align: center
+					font-size: 70px
+					margin-top: 25px
+					font-weight: 100
+
+			#top_aizu
+				img
+					top: 18px
+
+
+			#top_x
+				font-size: 200px
+				font-weight: 100
+				margin: 0 50px
+				top: -100px
+
+		#top_title
+			margin: 80px auto
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -117,7 +197,7 @@ $outlineContentSizeAdjast: 50px
 
 
 #aizu
-	background: url(../img/aizuBlur.jpg)
+	background: url(../img/seishunDoori.jpg)
 	background-size: cover
 	background-position: center
 	height: 900px
