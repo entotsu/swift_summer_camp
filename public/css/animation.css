@@ -182,3 +182,759 @@
   -webkit-animation: huerotator 3s infinite alternate;
   animation: huerotator 3s infinite alternate;
 }
+
+/* line 108, ../../sass/animation.sass */
+.buzz {
+  position: relative;
+  overflow: hidden;
+  width: 700px;
+  text-align: center;
+  height: 200px;
+}
+/* line 115, ../../sass/animation.sass */
+.buzz .lines {
+  width: 100%;
+  display: block;
+  background-color: white;
+  height: 2px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: 5px;
+  opacity: 0.1;
+}
+/* line 125, ../../sass/animation.sass */
+.buzz .text {
+  position: relative;
+}
+/* line 128, ../../sass/animation.sass */
+.buzz .text span {
+  position: absolute;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  filter: blur(1px);
+  font-size: 80px;
+  font-weight: bold;
+  left: 0;
+}
+/* line 135, ../../sass/animation.sass */
+.buzz .text span:nth-child(1) {
+  color: #d70011;
+  margin-left: -2px;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  filter: blur(2px);
+}
+/* line 139, ../../sass/animation.sass */
+.buzz .text span:nth-child(2) {
+  color: #22e123;
+  margin-left: 2px;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  filter: blur(2px);
+}
+/* line 143, ../../sass/animation.sass */
+.buzz .text span:nth-child(3) {
+  color: #a700da;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  filter: blur(1px);
+}
+/* line 146, ../../sass/animation.sass */
+.buzz .text span:nth-child(4) {
+  color: #14a6e2;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  filter: blur(1px);
+  text-shadow: 0 0 50px rgba(255, 255, 255, 0.4);
+}
+/* line 150, ../../sass/animation.sass */
+.buzz .text span:nth-child(5) {
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  filter: blur(15px);
+}
+
+/* line 155, ../../sass/animation.sass */
+.buzz .text span {
+  -o-animation: opacityLoop 30ms infinite, vibe 50ms infinite;
+  -moz-animation: opacityLoop 30ms infinite, vibe 50ms infinite;
+  -webkit-animation: opacityLoop 30ms infinite, vibe 50ms infinite;
+  animation: opacityLoop 30ms infinite, vibe 50ms infinite;
+}
+
+@-webkit-keyframes opacityLoop {
+  /* line 158, ../../sass/animation.sass */
+  0% {
+    opacity: 0.8;
+  }
+
+  /* line 160, ../../sass/animation.sass */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 162, ../../sass/animation.sass */
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes opacityLoop {
+  /* line 158, ../../sass/animation.sass */
+  0% {
+    opacity: 0.8;
+  }
+
+  /* line 160, ../../sass/animation.sass */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 162, ../../sass/animation.sass */
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@-ms-keyframes opacityLoop {
+  /* line 158, ../../sass/animation.sass */
+  0% {
+    opacity: 0.8;
+  }
+
+  /* line 160, ../../sass/animation.sass */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 162, ../../sass/animation.sass */
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes opacityLoop {
+  /* line 158, ../../sass/animation.sass */
+  0% {
+    opacity: 0.8;
+  }
+
+  /* line 160, ../../sass/animation.sass */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 162, ../../sass/animation.sass */
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes vibe {
+  /* line 165, ../../sass/animation.sass */
+  50% {
+    left: 1px;
+  }
+
+  /* line 167, ../../sass/animation.sass */
+  51% {
+    left: 0;
+  }
+}
+
+@-moz-keyframes vibe {
+  /* line 165, ../../sass/animation.sass */
+  50% {
+    left: 1px;
+  }
+
+  /* line 167, ../../sass/animation.sass */
+  51% {
+    left: 0;
+  }
+}
+
+@-ms-keyframes vibe {
+  /* line 165, ../../sass/animation.sass */
+  50% {
+    left: 1px;
+  }
+
+  /* line 167, ../../sass/animation.sass */
+  51% {
+    left: 0;
+  }
+}
+
+@keyframes vibe {
+  /* line 165, ../../sass/animation.sass */
+  50% {
+    left: 1px;
+  }
+
+  /* line 167, ../../sass/animation.sass */
+  51% {
+    left: 0;
+  }
+}
+
+/* line 170, ../../sass/animation.sass */
+.buzz .text span:nth-child(3) {
+  -o-animation: vibe_perple 1s infinite;
+  -moz-animation: vibe_perple 1s infinite;
+  -webkit-animation: vibe_perple 1s infinite;
+  animation: vibe_perple 1s infinite;
+}
+
+@-webkit-keyframes vibe_perple {
+  /* line 173, ../../sass/animation.sass */
+  0% {
+    left: 0;
+  }
+
+  /* line 175, ../../sass/animation.sass */
+  30% {
+    left: 0;
+  }
+
+  /* line 177, ../../sass/animation.sass */
+  31% {
+    left: 10px;
+  }
+
+  /* line 179, ../../sass/animation.sass */
+  32% {
+    left: 0;
+  }
+
+  /* line 181, ../../sass/animation.sass */
+  98% {
+    left: 0;
+  }
+
+  /* line 183, ../../sass/animation.sass */
+  100% {
+    left: 10px;
+  }
+}
+
+@-moz-keyframes vibe_perple {
+  /* line 173, ../../sass/animation.sass */
+  0% {
+    left: 0;
+  }
+
+  /* line 175, ../../sass/animation.sass */
+  30% {
+    left: 0;
+  }
+
+  /* line 177, ../../sass/animation.sass */
+  31% {
+    left: 10px;
+  }
+
+  /* line 179, ../../sass/animation.sass */
+  32% {
+    left: 0;
+  }
+
+  /* line 181, ../../sass/animation.sass */
+  98% {
+    left: 0;
+  }
+
+  /* line 183, ../../sass/animation.sass */
+  100% {
+    left: 10px;
+  }
+}
+
+@-ms-keyframes vibe_perple {
+  /* line 173, ../../sass/animation.sass */
+  0% {
+    left: 0;
+  }
+
+  /* line 175, ../../sass/animation.sass */
+  30% {
+    left: 0;
+  }
+
+  /* line 177, ../../sass/animation.sass */
+  31% {
+    left: 10px;
+  }
+
+  /* line 179, ../../sass/animation.sass */
+  32% {
+    left: 0;
+  }
+
+  /* line 181, ../../sass/animation.sass */
+  98% {
+    left: 0;
+  }
+
+  /* line 183, ../../sass/animation.sass */
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes vibe_perple {
+  /* line 173, ../../sass/animation.sass */
+  0% {
+    left: 0;
+  }
+
+  /* line 175, ../../sass/animation.sass */
+  30% {
+    left: 0;
+  }
+
+  /* line 177, ../../sass/animation.sass */
+  31% {
+    left: 10px;
+  }
+
+  /* line 179, ../../sass/animation.sass */
+  32% {
+    left: 0;
+  }
+
+  /* line 181, ../../sass/animation.sass */
+  98% {
+    left: 0;
+  }
+
+  /* line 183, ../../sass/animation.sass */
+  100% {
+    left: 10px;
+  }
+}
+
+/* line 187, ../../sass/animation.sass */
+.buzz .text span:nth-child(2) {
+  -o-animation: vibe_green 1s infinite;
+  -moz-animation: vibe_green 1s infinite;
+  -webkit-animation: vibe_green 1s infinite;
+  animation: vibe_green 1s infinite;
+}
+
+@-webkit-keyframes vibe_green {
+  /* line 190, ../../sass/animation.sass */
+  0% {
+    left: 0;
+  }
+
+  /* line 192, ../../sass/animation.sass */
+  30% {
+    left: 0;
+  }
+
+  /* line 194, ../../sass/animation.sass */
+  31% {
+    left: -10px;
+  }
+
+  /* line 196, ../../sass/animation.sass */
+  32% {
+    left: 0;
+  }
+
+  /* line 198, ../../sass/animation.sass */
+  98% {
+    left: 0;
+  }
+
+  /* line 200, ../../sass/animation.sass */
+  100% {
+    left: -10px;
+  }
+}
+
+@-moz-keyframes vibe_green {
+  /* line 190, ../../sass/animation.sass */
+  0% {
+    left: 0;
+  }
+
+  /* line 192, ../../sass/animation.sass */
+  30% {
+    left: 0;
+  }
+
+  /* line 194, ../../sass/animation.sass */
+  31% {
+    left: -10px;
+  }
+
+  /* line 196, ../../sass/animation.sass */
+  32% {
+    left: 0;
+  }
+
+  /* line 198, ../../sass/animation.sass */
+  98% {
+    left: 0;
+  }
+
+  /* line 200, ../../sass/animation.sass */
+  100% {
+    left: -10px;
+  }
+}
+
+@-ms-keyframes vibe_green {
+  /* line 190, ../../sass/animation.sass */
+  0% {
+    left: 0;
+  }
+
+  /* line 192, ../../sass/animation.sass */
+  30% {
+    left: 0;
+  }
+
+  /* line 194, ../../sass/animation.sass */
+  31% {
+    left: -10px;
+  }
+
+  /* line 196, ../../sass/animation.sass */
+  32% {
+    left: 0;
+  }
+
+  /* line 198, ../../sass/animation.sass */
+  98% {
+    left: 0;
+  }
+
+  /* line 200, ../../sass/animation.sass */
+  100% {
+    left: -10px;
+  }
+}
+
+@keyframes vibe_green {
+  /* line 190, ../../sass/animation.sass */
+  0% {
+    left: 0;
+  }
+
+  /* line 192, ../../sass/animation.sass */
+  30% {
+    left: 0;
+  }
+
+  /* line 194, ../../sass/animation.sass */
+  31% {
+    left: -10px;
+  }
+
+  /* line 196, ../../sass/animation.sass */
+  32% {
+    left: 0;
+  }
+
+  /* line 198, ../../sass/animation.sass */
+  98% {
+    left: 0;
+  }
+
+  /* line 200, ../../sass/animation.sass */
+  100% {
+    left: -10px;
+  }
+}
+
+/* line 203, ../../sass/animation.sass */
+.buzz .text {
+  -o-animation: skewVibe 5s infinite;
+  -moz-animation: skewVibe 5s infinite;
+  -webkit-animation: skewVibe 5s infinite;
+  animation: skewVibe 5s infinite;
+}
+
+@-webkit-keyframes skewVibe {
+  /* line 206, ../../sass/animation.sass */
+  40% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: skew(0, 0);
+    -moz-transform: skew(0, 0);
+    -ms-transform: skew(0, 0);
+    -o-transform: skew(0, 0);
+    transform: skew(0, 0);
+  }
+
+  /* line 212, ../../sass/animation.sass */
+  41% {
+    opacity: 0.8;
+    top: 0px;
+    left: -100px;
+    -webkit-transform: scale(1, 1.2);
+    -moz-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
+    -o-transform: scale(1, 1.2);
+    transform: scale(1, 1.2);
+    -webkit-transform: skew(50deg, 0);
+    -moz-transform: skew(50deg, 0);
+    -ms-transform: skew(50deg, 0);
+    -o-transform: skew(50deg, 0);
+    transform: skew(50deg, 0);
+  }
+
+  /* line 218, ../../sass/animation.sass */
+  42% {
+    opacity: 0.8;
+    top: 0px;
+    left: 100px;
+    -webkit-transform: scale(1, 1.2);
+    -moz-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
+    -o-transform: scale(1, 1.2);
+    transform: scale(1, 1.2);
+    -webkit-transform: skew(-80deg, 0);
+    -moz-transform: skew(-80deg, 0);
+    -ms-transform: skew(-80deg, 0);
+    -o-transform: skew(-80deg, 0);
+    transform: skew(-80deg, 0);
+  }
+
+  /* line 224, ../../sass/animation.sass */
+  43% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: skew(0, 0);
+    -moz-transform: skew(0, 0);
+    -ms-transform: skew(0, 0);
+    -o-transform: skew(0, 0);
+    transform: skew(0, 0);
+  }
+}
+
+@-moz-keyframes skewVibe {
+  /* line 206, ../../sass/animation.sass */
+  40% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: skew(0, 0);
+    -moz-transform: skew(0, 0);
+    -ms-transform: skew(0, 0);
+    -o-transform: skew(0, 0);
+    transform: skew(0, 0);
+  }
+
+  /* line 212, ../../sass/animation.sass */
+  41% {
+    opacity: 0.8;
+    top: 0px;
+    left: -100px;
+    -webkit-transform: scale(1, 1.2);
+    -moz-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
+    -o-transform: scale(1, 1.2);
+    transform: scale(1, 1.2);
+    -webkit-transform: skew(50deg, 0);
+    -moz-transform: skew(50deg, 0);
+    -ms-transform: skew(50deg, 0);
+    -o-transform: skew(50deg, 0);
+    transform: skew(50deg, 0);
+  }
+
+  /* line 218, ../../sass/animation.sass */
+  42% {
+    opacity: 0.8;
+    top: 0px;
+    left: 100px;
+    -webkit-transform: scale(1, 1.2);
+    -moz-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
+    -o-transform: scale(1, 1.2);
+    transform: scale(1, 1.2);
+    -webkit-transform: skew(-80deg, 0);
+    -moz-transform: skew(-80deg, 0);
+    -ms-transform: skew(-80deg, 0);
+    -o-transform: skew(-80deg, 0);
+    transform: skew(-80deg, 0);
+  }
+
+  /* line 224, ../../sass/animation.sass */
+  43% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: skew(0, 0);
+    -moz-transform: skew(0, 0);
+    -ms-transform: skew(0, 0);
+    -o-transform: skew(0, 0);
+    transform: skew(0, 0);
+  }
+}
+
+@-ms-keyframes skewVibe {
+  /* line 206, ../../sass/animation.sass */
+  40% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: skew(0, 0);
+    -moz-transform: skew(0, 0);
+    -ms-transform: skew(0, 0);
+    -o-transform: skew(0, 0);
+    transform: skew(0, 0);
+  }
+
+  /* line 212, ../../sass/animation.sass */
+  41% {
+    opacity: 0.8;
+    top: 0px;
+    left: -100px;
+    -webkit-transform: scale(1, 1.2);
+    -moz-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
+    -o-transform: scale(1, 1.2);
+    transform: scale(1, 1.2);
+    -webkit-transform: skew(50deg, 0);
+    -moz-transform: skew(50deg, 0);
+    -ms-transform: skew(50deg, 0);
+    -o-transform: skew(50deg, 0);
+    transform: skew(50deg, 0);
+  }
+
+  /* line 218, ../../sass/animation.sass */
+  42% {
+    opacity: 0.8;
+    top: 0px;
+    left: 100px;
+    -webkit-transform: scale(1, 1.2);
+    -moz-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
+    -o-transform: scale(1, 1.2);
+    transform: scale(1, 1.2);
+    -webkit-transform: skew(-80deg, 0);
+    -moz-transform: skew(-80deg, 0);
+    -ms-transform: skew(-80deg, 0);
+    -o-transform: skew(-80deg, 0);
+    transform: skew(-80deg, 0);
+  }
+
+  /* line 224, ../../sass/animation.sass */
+  43% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: skew(0, 0);
+    -moz-transform: skew(0, 0);
+    -ms-transform: skew(0, 0);
+    -o-transform: skew(0, 0);
+    transform: skew(0, 0);
+  }
+}
+
+@keyframes skewVibe {
+  /* line 206, ../../sass/animation.sass */
+  40% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: skew(0, 0);
+    -moz-transform: skew(0, 0);
+    -ms-transform: skew(0, 0);
+    -o-transform: skew(0, 0);
+    transform: skew(0, 0);
+  }
+
+  /* line 212, ../../sass/animation.sass */
+  41% {
+    opacity: 0.8;
+    top: 0px;
+    left: -100px;
+    -webkit-transform: scale(1, 1.2);
+    -moz-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
+    -o-transform: scale(1, 1.2);
+    transform: scale(1, 1.2);
+    -webkit-transform: skew(50deg, 0);
+    -moz-transform: skew(50deg, 0);
+    -ms-transform: skew(50deg, 0);
+    -o-transform: skew(50deg, 0);
+    transform: skew(50deg, 0);
+  }
+
+  /* line 218, ../../sass/animation.sass */
+  42% {
+    opacity: 0.8;
+    top: 0px;
+    left: 100px;
+    -webkit-transform: scale(1, 1.2);
+    -moz-transform: scale(1, 1.2);
+    -ms-transform: scale(1, 1.2);
+    -o-transform: scale(1, 1.2);
+    transform: scale(1, 1.2);
+    -webkit-transform: skew(-80deg, 0);
+    -moz-transform: skew(-80deg, 0);
+    -ms-transform: skew(-80deg, 0);
+    -o-transform: skew(-80deg, 0);
+    transform: skew(-80deg, 0);
+  }
+
+  /* line 224, ../../sass/animation.sass */
+  43% {
+    opacity: 1;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform: skew(0, 0);
+    -moz-transform: skew(0, 0);
+    -ms-transform: skew(0, 0);
+    -o-transform: skew(0, 0);
+    transform: skew(0, 0);
+  }
+}

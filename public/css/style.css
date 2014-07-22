@@ -94,33 +94,38 @@ section .content {
 }
 
 /* line 77, ../../sass/style.sass */
+* {
+  font-family: Helvetica Neue;
+}
+
+/* line 79, ../../sass/style.sass */
 h1 {
   font-size: 60px;
   font-weight: bolder;
 }
 
-/* line 80, ../../sass/style.sass */
+/* line 82, ../../sass/style.sass */
 h2 {
   font-size: 25px;
 }
 
-/* line 93, ../../sass/style.sass */
+/* line 95, ../../sass/style.sass */
 #header {
   height: 800px;
 }
-/* line 95, ../../sass/style.sass */
+/* line 97, ../../sass/style.sass */
 #header #headerBackground {
   height: 800px;
   width: 100%;
   position: absolute;
   z-index: -1;
 }
-/* line 100, ../../sass/style.sass */
+/* line 102, ../../sass/style.sass */
 #header .content {
   height: 800px;
   color: #14a6e2;
 }
-/* line 104, ../../sass/style.sass */
+/* line 106, ../../sass/style.sass */
 #header .content span#top_date {
   display: block;
   margin: 80px 0;
@@ -130,97 +135,97 @@ h2 {
   text-align: center;
   letter-spacing: 3px;
 }
-/* line 113, ../../sass/style.sass */
+/* line 115, ../../sass/style.sass */
 #header .content span#top_date #hyphen {
   font-size: 50px;
 }
-/* line 117, ../../sass/style.sass */
+/* line 119, ../../sass/style.sass */
 #header .content #top_swift_x_aizu {
   text-align: center;
 }
-/* line 121, ../../sass/style.sass */
+/* line 123, ../../sass/style.sass */
 #header .content #top_swift_x_aizu > div {
   display: inline-block;
   position: relative;
   font-family: Helvetica Neue;
 }
-/* line 126, ../../sass/style.sass */
+/* line 128, ../../sass/style.sass */
 #header .content #top_swift_x_aizu .top_icons {
   width: 250px;
   text-align: center;
 }
-/* line 129, ../../sass/style.sass */
+/* line 131, ../../sass/style.sass */
 #header .content #top_swift_x_aizu .top_icons img {
   position: relative;
   display: block;
   height: 200px;
   margin: 0 auto;
 }
-/* line 134, ../../sass/style.sass */
+/* line 136, ../../sass/style.sass */
 #header .content #top_swift_x_aizu .top_icons p {
   text-align: center;
   font-size: 70px;
   margin-top: 25px;
   font-weight: 100;
 }
-/* line 141, ../../sass/style.sass */
+/* line 143, ../../sass/style.sass */
 #header .content #top_swift_x_aizu #top_aizu img {
   top: 18px;
 }
-/* line 145, ../../sass/style.sass */
+/* line 147, ../../sass/style.sass */
 #header .content #top_swift_x_aizu #top_x {
   font-size: 200px;
   font-weight: 100;
   margin: 0 50px;
   top: -100px;
 }
-/* line 151, ../../sass/style.sass */
+/* line 153, ../../sass/style.sass */
 #header .content #top_title {
   margin: 80px auto;
 }
 
-/* line 167, ../../sass/style.sass */
+/* line 169, ../../sass/style.sass */
 #outline {
   position: relative;
   z-index: 2;
   margin-bottom: -800px;
 }
-/* line 171, ../../sass/style.sass */
+/* line 173, ../../sass/style.sass */
 #outline .header_angle {
   margin-bottom: -25px;
 }
-/* line 173, ../../sass/style.sass */
+/* line 175, ../../sass/style.sass */
 #outline .content_wrapper {
   background-color: #14a6e2;
   margin-top: -50px;
   margin-bottom: -50px;
 }
-/* line 177, ../../sass/style.sass */
+/* line 179, ../../sass/style.sass */
 #outline .content_wrapper .content {
   position: relative;
   z-index: 10;
   color: white;
 }
-/* line 181, ../../sass/style.sass */
+/* line 183, ../../sass/style.sass */
 #outline .content_wrapper .content h2 {
   margin: 40px 0;
   font-size: 30px;
   line-height: 1.75em;
 }
-/* line 185, ../../sass/style.sass */
+/* line 187, ../../sass/style.sass */
 #outline .content_wrapper .content p {
   font-size: 12px;
   width: 300px;
   line-height: 1.75em;
 }
-/* line 189, ../../sass/style.sass */
+/* line 191, ../../sass/style.sass */
 #outline .content_wrapper .content img {
   position: absolute;
   top: 99px;
   right: 27px;
 }
 
-/* line 199, ../../sass/style.sass */
+/* line 201, ../../sass/style.sass */
 #aizu {
   background: url(../img/seishunDoori.jpg);
   background-size: cover;
@@ -229,7 +234,7 @@ h2 {
   position: relative;
   overflow: hidden;
 }
-/* line 206, ../../sass/style.sass */
+/* line 208, ../../sass/style.sass */
 #aizu .map {
   position: absolute;
   left: -350px;
@@ -237,13 +242,13 @@ h2 {
   z-index: 0;
   opacity: 0.7;
 }
-/* line 212, ../../sass/style.sass */
+/* line 214, ../../sass/style.sass */
 #aizu .content {
   position: relative;
   z-index: 1;
   padding-top: 100px;
 }
-/* line 216, ../../sass/style.sass */
+/* line 218, ../../sass/style.sass */
 #aizu .content .text {
   position: absolute;
   right: 0px;
@@ -251,12 +256,12 @@ h2 {
   color: white;
   text-align: right;
 }
-/* line 222, ../../sass/style.sass */
+/* line 224, ../../sass/style.sass */
 #aizu .content .text h1 {
   line-height: 1.5em;
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 225, ../../sass/style.sass */
+/* line 227, ../../sass/style.sass */
 #aizu .content .text p {
   padding: 10px;
   display: inline-block;
@@ -268,12 +273,12 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 239, ../../sass/style.sass */
+/* line 241, ../../sass/style.sass */
 #swift {
   background-color: #f6a121;
   min-height: 800px;
 }
-/* line 243, ../../sass/style.sass */
+/* line 245, ../../sass/style.sass */
 #swift .content .text {
   position: absolute;
   margin-top: 208px;
@@ -281,11 +286,11 @@ h2 {
   text-align: left;
   color: white;
 }
-/* line 249, ../../sass/style.sass */
+/* line 251, ../../sass/style.sass */
 #swift .content .text h1 {
   line-height: 1.5em;
 }
-/* line 251, ../../sass/style.sass */
+/* line 253, ../../sass/style.sass */
 #swift .content .text p {
   margin: 20px 0 0 auto;
   line-height: 2em;
@@ -293,12 +298,12 @@ h2 {
   font-weight: bolder;
 }
 
-/* line 259, ../../sass/style.sass */
+/* line 261, ../../sass/style.sass */
 #MushUpAwards {
   background-color: #e74b62;
   min-height: 800px;
 }
-/* line 263, ../../sass/style.sass */
+/* line 265, ../../sass/style.sass */
 #MushUpAwards .content .text {
   position: absolute;
   margin-top: 208px;
@@ -307,11 +312,11 @@ h2 {
   text-align: right;
   color: white;
 }
-/* line 270, ../../sass/style.sass */
+/* line 272, ../../sass/style.sass */
 #MushUpAwards .content .text h1 {
   line-height: 1.5em;
 }
-/* line 272, ../../sass/style.sass */
+/* line 274, ../../sass/style.sass */
 #MushUpAwards .content .text p {
   margin: 20px 0 0 auto;
   line-height: 2em;
@@ -319,55 +324,55 @@ h2 {
   font-weight: bolder;
 }
 
-/* line 285, ../../sass/style.sass */
+/* line 287, ../../sass/style.sass */
 #recruitment {
   background-image: url(../img/personsBlur3.jpg);
   background-size: cover;
   height: 900px;
 }
-/* line 289, ../../sass/style.sass */
+/* line 291, ../../sass/style.sass */
 #recruitment .content {
   padding-top: 100px;
 }
-/* line 291, ../../sass/style.sass */
+/* line 293, ../../sass/style.sass */
 #recruitment .content .title {
   text-align: right;
 }
-/* line 293, ../../sass/style.sass */
+/* line 295, ../../sass/style.sass */
 #recruitment .content .title h1 {
   display: inline;
   margin-top: 20px;
   font-size: 100px;
   color: white;
 }
-/* line 298, ../../sass/style.sass */
+/* line 300, ../../sass/style.sass */
 #recruitment .content .requirementList {
   width: 52%;
   margin-top: 80px;
 }
-/* line 301, ../../sass/style.sass */
+/* line 303, ../../sass/style.sass */
 #recruitment .content .requirementList ul {
   list-style-type: disc;
 }
-/* line 303, ../../sass/style.sass */
+/* line 305, ../../sass/style.sass */
 #recruitment .content .requirementList ul li {
   margin-top: 30px;
   color: white;
   font-weight: bolder;
   font-size: 32px;
 }
-/* line 308, ../../sass/style.sass */
+/* line 310, ../../sass/style.sass */
 #recruitment .content .persons {
   position: absolute;
   right: 0;
   top: 275px;
 }
-/* line 312, ../../sass/style.sass */
+/* line 314, ../../sass/style.sass */
 #recruitment .content .persons img {
   margin: 20px;
   opacity: 0.83;
 }
-/* line 315, ../../sass/style.sass */
+/* line 317, ../../sass/style.sass */
 #recruitment .content .persons .limitOfPerson {
   margin-top: 20px;
   color: white;
@@ -376,59 +381,59 @@ h2 {
   text-align: center;
 }
 
-/* line 328, ../../sass/style.sass */
+/* line 330, ../../sass/style.sass */
 #schedule {
   background-color: #bc61e7;
 }
-/* line 330, ../../sass/style.sass */
+/* line 332, ../../sass/style.sass */
 #schedule .content {
   height: 700px;
 }
-/* line 332, ../../sass/style.sass */
+/* line 334, ../../sass/style.sass */
 #schedule .content #sheduleOutline {
   color: white;
 }
-/* line 334, ../../sass/style.sass */
+/* line 336, ../../sass/style.sass */
 #schedule .content #sheduleOutline h1 {
   padding-top: 100px;
   color: white;
   font-size: 100px;
 }
-/* line 338, ../../sass/style.sass */
+/* line 340, ../../sass/style.sass */
 #schedule .content #sheduleOutline p.period {
   margin-top: 109.5px;
   font-size: 81px;
   font-weight: bolder;
 }
-/* line 342, ../../sass/style.sass */
+/* line 344, ../../sass/style.sass */
 #schedule .content #sheduleOutline img.calender {
   position: absolute;
   right: 0;
   top: 150px;
 }
 
-/* line 352, ../../sass/style.sass */
+/* line 354, ../../sass/style.sass */
 #cost {
   background-color: #5aaae7;
 }
-/* line 354, ../../sass/style.sass */
+/* line 356, ../../sass/style.sass */
 #cost .content {
   height: 700px;
 }
-/* line 356, ../../sass/style.sass */
+/* line 358, ../../sass/style.sass */
 #cost .content h1 {
   padding-top: 100px;
   color: white;
   font-size: 100px;
 }
-/* line 360, ../../sass/style.sass */
+/* line 362, ../../sass/style.sass */
 #cost .content img {
   position: absolute;
   right: 0;
   top: 150px;
 }
 
-/* line 377, ../../sass/style.sass */
+/* line 379, ../../sass/style.sass */
 #photos {
   height: 10000px;
   background: url(../img/sparkles.gif), url(../img/bg-top.png), url(../img/bg-bottom.png);
@@ -436,7 +441,7 @@ h2 {
   background-repeat: repeat, repeat-x, repeat-x;
 }
 
-/* line 387, ../../sass/style.sass */
+/* line 389, ../../sass/style.sass */
 #prize {
   position: relative;
   height: 1000px;
@@ -444,7 +449,7 @@ h2 {
   background-color: #00b9c1;
   margin: 0 auto;
 }
-/* line 394, ../../sass/style.sass */
+/* line 396, ../../sass/style.sass */
 #prize p {
   position: absolute;
   width: 100%;
@@ -455,22 +460,22 @@ h2 {
   color: white;
 }
 
-/* line 408, ../../sass/style.sass */
+/* line 410, ../../sass/style.sass */
 #applicationForm {
   background-color: #00b9c1;
   height: 1500px;
 }
-/* line 412, ../../sass/style.sass */
+/* line 414, ../../sass/style.sass */
 #applicationForm .content {
   text-align: center;
   width: 1000px;
 }
-/* line 415, ../../sass/style.sass */
+/* line 417, ../../sass/style.sass */
 #applicationForm .content img#finalMessage {
   margin: 0px auto 200px auto;
   display: block;
 }
-/* line 420, ../../sass/style.sass */
+/* line 422, ../../sass/style.sass */
 #applicationForm .ghostButton {
   border-radius: 24px;
   -moz-border-radius: 24px;

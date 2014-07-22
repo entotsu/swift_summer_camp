@@ -2,14 +2,26 @@ doctype html
 html
   head
     title= pageTitle
-    link(href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css")
     link(href="css/style.css" rel="stylesheet" type="text/css")
     link(href="css/animation.css" rel="stylesheet" type="text/css")
     script(src='js/lib/jquery-2.1.1.min.js')
     script(src='js/lib/skrollr.min.js')
-    script(src='js/lib/jquery-letterfx.min.js')
-    script(src='js/lib/tuxsudo.min.js')
     script(src='js/main.js')
+    script.
+
+
+
+        $(function(){
+            var initBuzzText = function() {
+              for(i=0;i<3;i++) {
+                $('.buzz .text span').eq(0).clone().prependTo('.buzz .text');
+              }
+              for(i=0;i<10;i++) {
+                $('.buzz .lines').eq(0).clone().appendTo('.buzz');
+              }
+            };
+            initBuzzText();
+        });
 
 
 body
@@ -31,5 +43,8 @@ body
                     //- TODO Resize after
                     img(src="img/top_aizu.png")
                     p Aizu
-            #top_title
-                h1 Swift Summer Camp in Aizu
+
+            #top_title.buzz
+                .text
+                    span Swift Summer Camp in Aizu
+                .lines
