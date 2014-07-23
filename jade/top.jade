@@ -4,14 +4,75 @@ html
     title= pageTitle
     link(href="css/style.css" rel="stylesheet" type="text/css")
     link(href="css/animation.css" rel="stylesheet" type="text/css")
+
+
+body
+    .page
+
+      section#header.fillscreen
+        #headerBackground
+        .content
+
+            //- span#top_date(style="opacity:0;") 2012/09/01 <span id="hyphen">−</span> 2012/09/01
+
+            #top_swift_x_aizu
+                .top_icons#top_swift
+                    //- TODO Resize after
+                    img(src="img/top_swift.png" style="opacity:0;")
+                    p(style="opacity:0;") Swift
+                #top_x(style="opacity:0;") ×
+                .top_icons#top_aizu
+                    //- TODO Resize after
+                    img(src="img/top_aizu.png" style="opacity:0;")
+                    p(style="opacity:0;") Aizu
+
+            #top_title.buzz(style="opacity:0;")
+                .text
+                    span Swift Summer<br>Camp in Aizu
+                .lines
+
+
+
     script(src='js/lib/jquery-2.1.1.min.js')
+    script(src='js/lib/jquery.velocity.min.js')
+    script(src='js/lib/velocity.ui.min.js')
     script(src='js/lib/skrollr.min.js')
     script(src='js/main.js')
     script.
+        (function($,w,undefined){
+            console.log("init function start");
 
 
 
-        $(function(){
+
+
+            var resizeTimeout;
+            var resize = false;
+            var $w = $(window);
+
+            var resizeLanding = function() {
+                console.log("resize landing area");
+                $w.h = $w.height();
+                console.log($w.h);
+                $('.fillscreen').css({'min-height' : $w.h});
+            };
+
+            $w.resize(function(){
+                clearTimeout(resizeTimeout);
+                resized = true;
+                resizeTimeout = setTimeout(function(){
+                    if (resized === true) {
+                        resizeLanding();
+                        resized = false;
+                    }
+                },46);
+            });
+
+
+
+
+
+
             var initBuzzText = function() {
               for(i=0;i<3;i++) {
                 $('.buzz .text span').eq(0).clone().prependTo('.buzz .text');
@@ -20,31 +81,183 @@ html
                 $('.buzz .lines').eq(0).clone().appendTo('.buzz');
               }
             };
-            initBuzzText();
-        });
 
 
-body
-    .page
 
-      section#header
-        #headerBackground.zoomOut
-        .content
 
-            span#top_date 2012/09/01 <span id="hyphen">−</span> 2012/09/01
 
-            #top_swift_x_aizu
-                .top_icons#top_swift
-                    //- TODO Resize after
-                    img(src="img/top_swift.png")
-                    p Swift
-                #top_x ×
-                .top_icons#top_aizu
-                    //- TODO Resize after
-                    img(src="img/top_aizu.png")
-                    p Aizu
 
-            #top_title.buzz
-                .text
-                    span Swift Summer Camp in Aizu
-                .lines
+
+
+
+
+
+            var playVelocity = function(timeline){
+                // タイムラインjsonの各エントリを処理
+                $.each(timeline, function(selector, triggers){
+                    $.each(triggers, function(i, trigger){
+                        // startで指定したタイミングでアニメーションを開始
+                        setTimeout(function(){
+                            // タイムラインjsonのキーをセレクタとしたjQueryオブジェクトに対して、定義されたvelocityアニメーションを順次実行する
+                            var $elm = $(selector).show();
+                            $.each(trigger.anims, function(j, anim){
+                                $elm.velocity(anim.properties, anim.options);
+                            });
+                        }, trigger.start || 0);
+                    });
+                });
+            };
+
+
+
+
+            //- var LANDING_ANIMATION_1 = {
+            //-     "#top_date": [{
+            //-         anims: [{
+            //-             properties: SLIDE_UP_IN,
+            //-             options: {
+            //-                 duration: 700,
+            //-                 complete: function() {
+            //-                     playVelocity(LANDING_ANIMATION_2);
+            //-                 }
+            //-             }
+            //-         }]
+            //-     }]
+            //- };
+            var LANDING_ANIMATION_2 = {
+                "#top_aizu *" : [{
+                    anims: [{
+                        properties: "landing.rotateIn"
+                    }]
+                }],
+                //- "#top_aizu > p" : [{
+                //-     anims: [{
+                //-         properties: "landing.fadeInSlideUp_small",
+                //-         options: {
+                //-             delay: 1000,
+                //-         }
+                //-     }]
+                //- }],
+                "#top_swift *" : [{
+                    anims: [{
+                        properties: "landing.rotateIn",
+                        options: {
+                            delay: 800,
+                            complete: function() {
+                                playVelocity(LANDING_ANIMATION_4);
+                            }
+                        }
+                    }]
+                }],
+                //- "#top_swift > p" : [{
+                //-     anims: [{
+                //-         properties: "landing.fadeInSlideUp_small",
+                //-         options: {
+                //-             delay: 2300,
+                //-             complete: function() {
+                //-                 playVelocity(LANDING_ANIMATION_4);
+                //-             }
+                //-         }
+                //-     }]
+                //- }]
+            };
+            var LANDING_ANIMATION_4 = {
+                "#top_x" : [{
+                    anims: [{
+                        properties: "landing.shakeFadeIn_forX",
+                        options: {
+                            display: "inline-block"
+                        }
+                    }]
+                }],
+                "#top_title" : [{
+                    anims: [{
+                        properties: "landing.shakeFadeIn",
+                    }]
+                }]
+            };
+
+
+            var addCustomAnimation = function() {
+                $.Velocity.RegisterUI("landing.shakeFadeIn_forX", {
+                    defaultDuration: 1200,
+                    calls: [ 
+                        [{
+                            opacity: [1, 0],
+                            rotateZ: [0, -1000]
+                        }, .2 ],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 0 }, .02]
+
+                    ],
+                });
+                $.Velocity.RegisterUI("landing.shakeFadeIn", {
+                    defaultDuration: 1200,
+                    calls: [ 
+                        [{
+                            opacity: [1, 0],
+                            rotateZ: [-5, -1000]
+                        }, .2 ],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 11 }, .02],
+                        [{translateX: -11 }, .02],
+                        [{translateX: 0 }, .02]
+
+                    ],
+                });
+                $.Velocity.RegisterUI("landing.fadeInSlideUp", {
+                    defaultDuration: 1200,
+                    calls: [ 
+                        [
+                            {
+                                opacity: 1,
+                                translateY: [0, 200]
+                            },
+                            1.0
+                        ]
+                    ],
+                });
+                $.Velocity.RegisterUI("landing.rotateIn", {
+                    defaultDuration: 700,
+                    calls: [ 
+                        [
+                            {
+                                opacity: 1,
+                                rotateZ: [0, -90]
+                            },
+                            1.0
+                        ]
+                    ],
+                });
+            }
+            
+
+
+            $(document).ready(function(){
+                console.log("document ready")
+                resizeLanding();
+                initBuzzText();
+                addCustomAnimation();
+                setTimeout(function(){
+                    playVelocity(LANDING_ANIMATION_2);
+                },1);
+            });
+        }(jQuery, window));

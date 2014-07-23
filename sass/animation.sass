@@ -104,11 +104,9 @@
 
 // ---------------- Buzz Animation --------------------
 $blueColor: #14a6e2
-$buzzWidth: 700px
 .buzz
   position: relative
   overflow: hidden
-  width: $buzzWidth
   text-align: center
   height: 200px
 
@@ -120,7 +118,7 @@ $buzzWidth: 700px
     position: relative
     z-index: 3
     margin-bottom: 5px
-    opacity: 0.1
+    opacity: 0
 
   .text
     position: relative
@@ -128,20 +126,18 @@ $buzzWidth: 700px
     span
       position: absolute
       +filter(blur(1px))
-      font-size: 80px
-      font-weight: bold
       left: 0
 
     span:nth-child(1)
-      color: #d70011//red
+      color: #dc360d//red
       margin-left: -2px
       +filter(blur(2px))
     span:nth-child(2)
-      color: #22e123//green
+      color: #20e47d//green
       margin-left: 2px
       +filter(blur(2px))
     span:nth-child(3)
-      color: #a700da//purple
+      color: #05004b//purple
       +filter(blur(1px))
     span:nth-child(4)
       color: $blueColor
