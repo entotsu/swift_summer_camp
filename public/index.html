@@ -59,17 +59,26 @@
   </head>
   <body>
     <div class="page">
-      <section id="header">
-        <div id="headerBackground" class="zoomOut"></div>
+      <section id="header" class="fillscreen">
+        <div id="headerBackground"></div>
         <div class="content">
-          <div id="topTitleBox" class="title">
-            <h1 id="topTitle1">Swift Summer Camp</h1>
-            <h1 id="topTitle2">in Aizu</h1>
-            <h2 id="topSubTitle">Swift漬けで会津をハックする10日間</h2>
+          <div id="top_swift_x_aizu">
+            <div id="top_swift" class="top_icons"><img src="img/top_swift.png" style="opacity:0;">
+              <p style="opacity:0;">Swift</p>
+            </div>
+            <div id="top_x" style="opacity:0;">×</div>
+            <div id="top_aizu" class="top_icons"><img src="img/top_aizu.png" style="opacity:0;">
+              <p style="opacity:0;">Aizu</p>
+            </div>
           </div>
+          <div id="top_title" style="opacity:0;" class="buzzXXXX">
+            <div class="text"><span>Swift Summer<br>Camp in Aizu</span></div>
+            <div class="lines"></div>
+          </div>
+          <p id="take-a-look" style="opacity:0;"><a><span>take a look</span><i class="fa fa-flag fa-arrow-down"></i></a></p>
         </div>
       </section>
-      <section id="outline" style="position:relative;top:-200px;" data-0="top:-200px;" data-1200="top:-800px;">
+      <section id="outline" style="position:relative;top:0px;" data-0="top:0px;" data-1200="top:-800px;">
         <div id="angleHeader1" class="angle_container">
           <div class="header_angle angle">
             <svg height="250" version="1.1" width="2560" xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; position: relative; left: 0.5px;">
@@ -171,5 +180,192 @@
       </section>
       <section id="fottter"></section>
     </div>
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="js/lib/jquery.velocity.min.js"></script>
+    <script src="js/lib/velocity.ui.min.js"></script>
+    <script src="js/lib/skrollr.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      (function($,w,undefined){
+          console.log("init function start");
+          
+          // ------------- resize -------------
+          var resizeTimeout;
+          var resize = false;
+          var $w = $(window);
+          var resizeLanding = function() {
+              console.log("resize landing area");
+              $w.h = $w.height();
+              console.log($w.h);
+              $('.fillscreen').css({ 'min-height' : $w.h });
+              $('#top_swift_x_aizu').css({ 'padding-top' : $w.h * 0.05 + "px" });
+              $('#top_title').css({ 'margin' : ($w.h * 0.03) + "px auto" });
+              $('#take-a-look').css({ 'margin-top' : $w.h * 0.11 + "px" });
+          };
+          $w.resize(function(){
+              clearTimeout(resizeTimeout);
+              resized = true;
+              resizeTimeout = setTimeout(function(){
+                  if (resized === true) {
+                      resizeLanding();
+                      resized = false;
+                  }
+              },46);
+          });
+          
+          
+          // ------------- Title Animation -------------
+          var initBuzzText = function() {
+          $("#top_title").addClass("buzz");
+            for(i=0;i<3;i++) {
+              $('.buzz .text span').eq(0).clone().prependTo('.buzz .text');
+            }
+            for(i=0;i<10;i++) {
+              $('.buzz .lines').eq(0).clone().appendTo('.buzz');
+            }
+          };
+          
+          
+          
+          // ------------- Top Section Animations -------------
+          var playVelocity = function(timeline){
+              // タイムラインjsonの各エントリを処理
+              $.each(timeline, function(selector, triggers){
+                  $.each(triggers, function(i, trigger){
+                      // startで指定したタイミングでアニメーションを開始
+                      setTimeout(function(){
+                          // タイムラインjsonのキーをセレクタとしたjQueryオブジェクトに対して、定義されたvelocityアニメーションを順次実行する
+                          var $elm = $(selector).show();
+                          $.each(trigger.anims, function(j, anim){
+                              $elm.velocity(anim.properties, anim.options);
+                          });
+                      }, trigger.start || 0);
+                  });
+              });
+          };
+          
+          
+          var LANDING_ANIMATION_1 = {
+              "#top_aizu *" : [{
+                  anims: [{
+                      properties: "landing.slideDownIn"
+                  }]
+              }],
+              "#top_swift *" : [{
+                  anims: [{
+                      properties: "landing.slideDownIn",
+                      options: {
+                          delay: 800,
+                          complete: function() {
+                              playVelocity(LANDING_ANIMATION_2);
+                          }
+                      }
+                  }]
+              }],
+          };
+          var LANDING_ANIMATION_2 = {
+              "#top_x" : [{
+                  anims: [{
+                      properties: "landing.shakeFadeIn_0deg",
+                      options: {
+                          display: "inline-block"
+                      }
+                  }]
+              }],
+              "#top_title" : [{
+                  anims: [{
+                      properties: "landing.shakeFadeIn",
+                      options: {
+                          complete: function() {
+                              //- initBuzzText();//重い
+                              setTimeout(function(){
+                                  playVelocity(LANDING_ANIMATION_3);
+                              },1000)
+                          }
+                      }
+                  }]
+              }]
+          };
+          var LANDING_ANIMATION_3 = {
+              "#take-a-look" : [{
+                  anims: [{
+                      properties: "landing.fadeInSlideUp"
+                  }]
+              }]
+          };
+          
+          
+          var addCustomAnimation = function() {
+              var SHAKE_FADE_IN = {
+                  defaultDuration: 1200,
+                  calls: [ 
+                      [{
+                          opacity: [1, 0],
+                          rotateZ: [5, -360],
+                          scale: [1, 5]
+                      }, .7, { easing: "ease-in-out" } ],
+                      [{translateX: -11 }, .02],// 0.2 * 12 = 2.4
+                      [{translateX: 11 }, .02],
+                      [{translateX: -11 }, .02],
+                      [{translateX: 11 }, .02],
+                      [{translateX: -11 }, .02],
+                      [{translateX: 11 }, .02],
+                      [{translateX: -11 }, .02],
+                      [{translateX: 11 }, .02],
+                      [{translateX: -11 }, .02],
+                      [{translateX: 11 }, .02],
+                      [{translateX: -11 }, .02],
+                      [{translateX: 0 }, .02]
+                      
+                  ],
+              };
+              var SHAKE_FADE_IN_0deg = $.extend(true, {}, SHAKE_FADE_IN);
+              SHAKE_FADE_IN_0deg.calls[0][0].rotateZ[0] = 0
+              $.Velocity.RegisterUI("landing.shakeFadeIn", SHAKE_FADE_IN);
+              $.Velocity.RegisterUI("landing.shakeFadeIn_0deg", SHAKE_FADE_IN_0deg);
+              $.Velocity.RegisterUI("landing.fadeInSlideUp", {
+                  defaultDuration: 900,
+                  calls: [ 
+                      [
+                          {
+                              opacity: [1, 0],
+                              translateY: [0, 50]
+                          },
+                          1.0
+                      ]
+                  ],
+              });
+              $.Velocity.RegisterUI("landing.slideDownIn", {
+                  defaultDuration: 700,
+                  calls: [ 
+                      [
+                          {
+                              opacity: 1,
+                              translateY: [0, -90]
+                          },
+                          1.0
+                      ]
+                  ],
+              });
+          }
+          
+          $(document).ready(function(){
+              console.log("document ready")
+              resizeLanding();
+              addCustomAnimation();
+              setTimeout(function(){
+                  playVelocity(LANDING_ANIMATION_1);
+              },1);
+          });
+      }(jQuery, window));
+      
+      
+      
+      
+      
+      
+      
+      
+    </script>
   </body>
 </html>

@@ -72,6 +72,7 @@
         
         
         var initBuzzText = function() {
+        $("#top_title").addClass("buzz");
           for(i=0;i<3;i++) {
             $('.buzz .text span').eq(0).clone().prependTo('.buzz .text');
           }
@@ -173,7 +174,10 @@
                     properties: "landing.shakeFadeIn",
                     options: {
                         complete: function() {
-                            playVelocity(LANDING_ANIMATION_5);
+                            initBuzzText();//重い
+                            setTimeout(function(){
+                                playVelocity(LANDING_ANIMATION_5);
+                            },1000)
                         }
                     }
                 }]
@@ -248,7 +252,6 @@
         $(document).ready(function(){
             console.log("document ready")
             resizeLanding();
-            initBuzzText();
             addCustomAnimation();
             setTimeout(function(){
                 playVelocity(LANDING_ANIMATION_2);
