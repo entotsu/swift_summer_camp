@@ -49,8 +49,8 @@
             console.log("resize landing area");
             $w.h = $w.height();
             console.log($w.h);
-            $('.fillscreen').css({ 'height' : $w.h });
-            $('#header > .content').css({ 'padding-top' : $w.h * 0.05 + "px" });
+            $('.fillscreen').css({ 'min-height' : $w.h });
+            $('#top_swift_x_aizu').css({ 'padding-top' : $w.h * 0.05 + "px" });
             $('#top_title').css({ 'margin' : ($w.h * 0.03) + "px auto" });
             $('#take-a-look').css({ 'margin-top' : $w.h * 0.11 + "px" });
         };
@@ -125,7 +125,7 @@
         var LANDING_ANIMATION_2 = {
             "#top_aizu *" : [{
                 anims: [{
-                    properties: "landing.rotateIn"
+                    properties: "landing.slideDownIn"
                 }]
             }],
             //- "#top_aizu > p" : [{
@@ -138,7 +138,7 @@
             //- }],
             "#top_swift *" : [{
                 anims: [{
-                    properties: "landing.rotateIn",
+                    properties: "landing.slideDownIn",
                     options: {
                         delay: 800,
                         complete: function() {
@@ -162,7 +162,7 @@
         var LANDING_ANIMATION_4 = {
             "#top_x" : [{
                 anims: [{
-                    properties: "landing.shakeFadeIn_forX",
+                    properties: "landing.shakeFadeIn_0deg",
                     options: {
                         display: "inline-block"
                     }
@@ -171,51 +171,33 @@
             "#top_title" : [{
                 anims: [{
                     properties: "landing.shakeFadeIn",
+                    options: {
+                        complete: function() {
+                            playVelocity(LANDING_ANIMATION_5);
+                        }
+                    }
                 }]
-            }],
+            }]
+        };
+        var LANDING_ANIMATION_5 = {
             "#take-a-look" : [{
                 anims: [{
-                    properties: "landing.fadeInSlideUp",
-                    options: {
-                        delay: 900
-                    }
+                    properties: "landing.fadeInSlideUp"
                 }]
             }]
         };
         
         
+        
         var addCustomAnimation = function() {
-            $.Velocity.RegisterUI("landing.shakeFadeIn_forX", {
+            var SHAKE_FADE_IN = {
                 defaultDuration: 1200,
                 calls: [ 
                     [{
                         opacity: [1, 0],
-                        rotateZ: [0, -1000],
-                        scale: [1, 10]
-                    }, .2 ],
-                    [{translateX: -11 }, .02],
-                    [{translateX: 11 }, .02],
-                    [{translateX: -11 }, .02],
-                    [{translateX: 11 }, .02],
-                    [{translateX: -11 }, .02],
-                    [{translateX: 11 }, .02],
-                    [{translateX: -11 }, .02],
-                    [{translateX: 11 }, .02],
-                    [{translateX: -11 }, .02],
-                    [{translateX: 11 }, .02],
-                    [{translateX: -11 }, .02],
-                    [{translateX: 0 }, .02]
-                    
-                ],
-            });
-            $.Velocity.RegisterUI("landing.shakeFadeIn", {
-                defaultDuration: 1200,
-                calls: [ 
-                    [{
-                        opacity: [1, 0],
-                        rotateZ: [-5, -1000],
-                        scale: [1, 10]
-                    }, .4 ],
+                        rotateZ: [-5, -360],
+                        scale: [1, 5]
+                    }, .7, { easing: "ease-in-out" } ],
                     [{translateX: -11 }, .02],// 0.2 * 12 = 2.4
                     [{translateX: 11 }, .02],
                     [{translateX: -11 }, .02],
@@ -230,7 +212,11 @@
                     [{translateX: 0 }, .02]
                     
                 ],
-            });
+            };
+            var SHAKE_FADE_IN_0deg = $.extend(true, {}, SHAKE_FADE_IN);
+            SHAKE_FADE_IN_0deg.calls[0][0].rotateZ[0] = 0
+            $.Velocity.RegisterUI("landing.shakeFadeIn", SHAKE_FADE_IN);
+            $.Velocity.RegisterUI("landing.shakeFadeIn_0deg", SHAKE_FADE_IN_0deg);
             $.Velocity.RegisterUI("landing.fadeInSlideUp", {
                 defaultDuration: 900,
                 calls: [ 
@@ -243,7 +229,7 @@
                     ]
                 ],
             });
-            $.Velocity.RegisterUI("landing.rotateIn", {
+            $.Velocity.RegisterUI("landing.slideDownIn", {
                 defaultDuration: 700,
                 calls: [ 
                     [
