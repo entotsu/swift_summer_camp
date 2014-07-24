@@ -75,7 +75,7 @@
             <div class="text"><span>Swift Summer<br>Camp in Aizu</span></div>
             <div class="lines"></div>
           </div>
-          <p id="take-a-look" style="opacity:0;"><a><span>take a look</span><i class="fa fa-flag fa-arrow-down"></i></a></p>
+          <p id="take-a-look" style="opacity:0;"><a href="#outline"><span>take a look</span><i class="fa fa-flag fa-arrow-down"></i></a></p>
         </div>
       </section>
       <section id="outline" style="position:relative;top:0px;" data-0="top:0px;" data-1200="top:-800px;">
@@ -349,6 +349,19 @@
               });
           }
           
+          
+          var initScrollLink2outline = function() {
+              $('a[href^=#outline]').click(function(){
+                  var speed = 500;
+                  var href= $(this).attr("href");
+                  var target = $(href == "#" || href == "" ? 'html' : href);
+                  var position = target.offset().top - 500;
+                  $("html, body").animate({scrollTop:position}, speed, "swing");
+                  return false;
+              });
+          }
+          
+          
           $(document).ready(function(){
               console.log("document ready")
               resizeLanding();
@@ -356,6 +369,7 @@
               setTimeout(function(){
                   playVelocity(LANDING_ANIMATION_1);
               },1);
+              initScrollLink2outline();
           });
       }(jQuery, window));
       

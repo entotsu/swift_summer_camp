@@ -78,7 +78,7 @@ html
                     span Swift Summer<br>Camp in Aizu
                 .lines
             p#take-a-look(style="opacity:0;")
-                a
+                a(href="#outline")
                     span take a look
                     i(class="fa fa-flag fa-arrow-down")
 
@@ -387,6 +387,19 @@ html
                 });
             }
             
+
+            var initScrollLink2outline = function() {
+                $('a[href^=#outline]').click(function(){
+                    var speed = 500;
+                    var href= $(this).attr("href");
+                    var target = $(href == "#" || href == "" ? 'html' : href);
+                    var position = target.offset().top - 500;
+                    $("html, body").animate({scrollTop:position}, speed, "swing");
+                    return false;
+                });
+            }
+
+
             $(document).ready(function(){
                 console.log("document ready")
                 resizeLanding();
@@ -394,6 +407,7 @@ html
                 setTimeout(function(){
                     playVelocity(LANDING_ANIMATION_1);
                 },1);
+                initScrollLink2outline();
             });
         }(jQuery, window));
 
