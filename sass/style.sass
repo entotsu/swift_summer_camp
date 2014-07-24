@@ -1,6 +1,7 @@
 
 @import "compass/reset"
 @import "compass"
+@import "vendor/font-awesome"
 
 =position($position, $args)
 	position: $position
@@ -106,6 +107,7 @@ h2
 		height: $headerHeight
 		color: $blueColor
 		font-family: Futura
+		padding-top: 100px
 
 		// span#top_date
 		// 	display: block
@@ -125,7 +127,6 @@ h2
 			position: relative
 			left: 54px
 			text-align: center
-			padding-top: 100px
 
 			>div
 				display: inline-block
@@ -163,10 +164,28 @@ h2
 		#top_title
 			margin: 87px auto
 			width: 800px
+			text-align: center
 			.text > span
 				width: 100%
 				font-size: 95px
 				font-weight: bold
+
+		#take-a-look
+			text-align: center
+			a
+				border: 2px solid $blueColor
+				padding: 10px
+				+transition(background-color 0.4s linear 0)
+				span
+					font-size: 17px
+				i
+					padding-left: 10px
+			a:hover
+				background-color: $blueColor
+				color: white
+				text-decoration: underline
+				cursor: pointer
+
 
 
 

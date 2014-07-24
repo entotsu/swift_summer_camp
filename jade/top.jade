@@ -26,11 +26,15 @@ body
                     img(src="img/top_aizu.png" style="opacity:0;")
                     p(style="opacity:0;") Aizu
 
-            #top_title.buzz(style="opacity:0;")
+            #top_title.buzzXXXX(style="opacity:0;")
                 .text
                     span Swift Summer<br>Camp in Aizu
                 .lines
 
+            p#take-a-look(style="opacity:0;")
+                a
+                    span take a look
+                    i(class="fa fa-flag fa-arrow-down")
 
 
     script(src='js/lib/jquery-2.1.1.min.js')
@@ -54,7 +58,10 @@ body
                 console.log("resize landing area");
                 $w.h = $w.height();
                 console.log($w.h);
-                $('.fillscreen').css({'min-height' : $w.h});
+                $('.fillscreen').css({ 'height' : $w.h });
+                $('#header > .content').css({ 'padding-top' : $w.h * 0.05 + "px" });
+                $('#top_title').css({ 'margin' : ($w.h * 0.03) + "px auto" });
+                $('#take-a-look').css({ 'margin-top' : $w.h * 0.11 + "px" });
             };
 
             $w.resize(function(){
@@ -174,6 +181,14 @@ body
                     anims: [{
                         properties: "landing.shakeFadeIn",
                     }]
+                }],
+                "#take-a-look" : [{
+                    anims: [{
+                        properties: "landing.fadeInSlideUp",
+                        options: {
+                            delay: 900
+                        }
+                    }]
                 }]
             };
 
@@ -184,7 +199,8 @@ body
                     calls: [ 
                         [{
                             opacity: [1, 0],
-                            rotateZ: [0, -1000]
+                            rotateZ: [0, -1000],
+                            scale: [1, 10]
                         }, .2 ],
                         [{translateX: -11 }, .02],
                         [{translateX: 11 }, .02],
@@ -206,9 +222,10 @@ body
                     calls: [ 
                         [{
                             opacity: [1, 0],
-                            rotateZ: [-5, -1000]
-                        }, .2 ],
-                        [{translateX: -11 }, .02],
+                            rotateZ: [-5, -1000],
+                            scale: [1, 10]
+                        }, .4 ],
+                        [{translateX: -11 }, .02],// 0.2 * 12 = 2.4
                         [{translateX: 11 }, .02],
                         [{translateX: -11 }, .02],
                         [{translateX: 11 }, .02],
@@ -224,12 +241,12 @@ body
                     ],
                 });
                 $.Velocity.RegisterUI("landing.fadeInSlideUp", {
-                    defaultDuration: 1200,
+                    defaultDuration: 900,
                     calls: [ 
                         [
                             {
-                                opacity: 1,
-                                translateY: [0, 200]
+                                opacity: [1, 0],
+                                translateY: [0, 50]
                             },
                             1.0
                         ]
@@ -241,7 +258,7 @@ body
                         [
                             {
                                 opacity: 1,
-                                rotateZ: [0, -90]
+                                translateY: [0, -90]
                             },
                             1.0
                         ]
