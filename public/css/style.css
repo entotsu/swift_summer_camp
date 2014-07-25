@@ -2992,13 +2992,22 @@ h2 {
 
 /* line 418, ../../sass/style.sass */
 #photos {
-  height: 10000px;
+  height: 11000px;
   background: url(../img/sparkles.gif), url(../img/bg-top.png), url(../img/bg-bottom.png);
   background-position: top, top, bottom;
   background-repeat: repeat, repeat-x, repeat-x;
 }
+/* line 424, ../../sass/style.sass */
+#photos .content div.parallaxPic {
+  position: relative;
+  display: none;
+}
+/* line 427, ../../sass/style.sass */
+#photos .content div.parallaxPic img {
+  position: relative;
+}
 
-/* line 428, ../../sass/style.sass */
+/* line 432, ../../sass/style.sass */
 #prize {
   position: relative;
   height: 1000px;
@@ -3006,7 +3015,7 @@ h2 {
   background-color: #00b9c1;
   margin: 0 auto;
 }
-/* line 435, ../../sass/style.sass */
+/* line 439, ../../sass/style.sass */
 #prize p {
   position: absolute;
   width: 100%;
@@ -3017,22 +3026,22 @@ h2 {
   color: white;
 }
 
-/* line 449, ../../sass/style.sass */
+/* line 453, ../../sass/style.sass */
 #applicationForm {
   background-color: #00b9c1;
   height: 1500px;
 }
-/* line 453, ../../sass/style.sass */
+/* line 457, ../../sass/style.sass */
 #applicationForm .content {
   text-align: center;
   width: 1000px;
 }
-/* line 456, ../../sass/style.sass */
+/* line 460, ../../sass/style.sass */
 #applicationForm .content img#finalMessage {
   margin: 0px auto 200px auto;
   display: block;
 }
-/* line 461, ../../sass/style.sass */
+/* line 465, ../../sass/style.sass */
 #applicationForm .ghostButton {
   border-radius: 24px;
   -moz-border-radius: 24px;

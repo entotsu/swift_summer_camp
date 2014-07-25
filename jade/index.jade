@@ -1,10 +1,103 @@
 doctype html
-html
+html(lang="ja")
   head
-    title= pageTitle
+    meta(charset="utf-8")
+    title 会津Swift合宿 2014
     link(href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css")
     link(href="css/style.css" rel="stylesheet" type="text/css")
     link(href="css/animation.css" rel="stylesheet" type="text/css")
+
+    style.
+
+      .parallaxPic {
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        backface-visibility: hidden;
+        perspective: 1000;
+      }
+
+      #parallax-0 {
+        -skrollr-animation-name:parallax-0;
+      }
+
+      @-skrollr-keyframes parallax-0 {
+        bottom-top {
+          -webkit-transform: translate3d(0px,0px,0px);
+          -moz-transform: translate3d(0px,0px,0px);
+          transform: translate3d(0px,0px,0px);
+        }
+        top-bottom {
+          -webkit-transform: translate3d(0px,-200px,0px);
+          -moz-transform: translate3d(0px,-200px,0px);
+          transform: translate3d(0px,-200px,0px);
+        }
+      }
+
+      #parallax-1 {
+        -skrollr-animation-name:parallax-1;
+      }
+
+      @-skrollr-keyframes parallax-1 {
+        bottom-top {
+          -webkit-transform: translate3d(0px,-100px,0px);
+          -moz-transform: translate3d(0px,-100px,0px);
+          transform: translate3d(0px,-100px,0px);
+        }
+        top-bottom {
+          -webkit-transform: translate3d(0px,-200px,0px);
+          -moz-transform: translate3d(0px,-200px,0px);
+          transform: translate3d(0px,-200px,0px);
+        }
+      }
+      
+      #parallax-2 {
+        -skrollr-animation-name:parallax-2;
+      }
+
+      @-skrollr-keyframes parallax-2 {
+        bottom-top {
+          -webkit-transform: translate3d(0px,-200px,0px);
+          -moz-transform: translate3d(0px,-200px,0px);
+          transform: translate3d(0px,-200px,0px);
+        }
+        top-bottom {
+          -webkit-transform: translate3d(0px,0px,0px);
+          -moz-transform: translate3d(0px,0px,0px);
+          transform: translate3d(0px,0px,0px);
+        }
+      }
+
+      #parallax-3 {
+        -skrollr-animation-name:parallax-3;
+      }
+
+      @-skrollr-keyframes parallax-3 {
+        bottom-top {
+          -webkit-transform: translate3d(0px,-20px,0px);
+          -moz-transform: translate3d(0px,-20px,0px);
+          transform: translate3d(0px,-20px,0px);
+        }
+        top-bottom {
+          -webkit-transform: translate3d(0px,144px,0px);
+          -moz-transform: translate3d(0px,144px,0px);
+          transform: translate3d(0px,144px,0px);
+        }
+      }
+
+      #background-stop {
+        -skrollr-animation-name:background-stop;
+      }
+
+      @-skrollr-keyframes background-stop {
+        bottom-top {
+          background-position: center -500px;
+        }
+        top-bottom {
+          background-position: center 100px;
+        }
+      }
+
+
 
   body
     .page
@@ -131,14 +224,65 @@ html
 
       section#photos
         .content
-          img.photos
-          img.photos
-          img.photos
-          img.photos
-          img.photos
-          img.photos
-          img.photos
-          img#prizeImg
+          div(class="parallaxPic" id="parallax-3")
+            img(src="img/memory/memory_01.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_02.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_03.jpg")
+          div(class="parallaxPic" id="parallax-0")
+            img(src="img/memory/memory_04.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-3")
+            img(src="img/memory/memory_05.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_06.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_07.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_08.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_09.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_10.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_11.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-3")
+            img(src="img/memory/memory_13.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_14.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_15.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_16.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-3")
+            img(src="img/memory/memory_17.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_18.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_19.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_20.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-3")
+            img(src="img/memory/memory_21.jpg" style="left:0%")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_23.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_22.jpg" style="left:0%")
+          div(class="parallaxPic" id="parallax-3")
+            img(src="img/memory/memory_25.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_24.jpg")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_26.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-3")
+            img(src="img/memory/memory_27.jpg")
+          div(class="parallaxPic" id="parallax-2")
+            img(src="img/memory/memory_28.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-1")
+            img(src="img/memory/memory_29.jpg")
+          div(class="parallaxPic" id="parallax-3")
+            img(src="img/memory/memory_30.jpg" style="left:50%")
+
 
 
       section#prize(class="skrollable skrollable-between" data-bottom-top="background-position: center -400px;" data-center="background-position: center 200px;" style="background-position: 50% -500px;")
@@ -163,7 +307,9 @@ html
     script(src='js/lib/jquery-2.1.1.min.js')
     script(src='js/lib/jquery.velocity.min.js')
     script(src='js/lib/velocity.ui.min.js')
+    script(src='js/lib/imagesloaded.pkgd.min.js')
     script(src='js/lib/skrollr.min.js')
+    script(src='js/lib/skrollr.stylesheets.min.js')
     script(src='js/main.js')
     script.
         (function($,w,undefined){
@@ -204,6 +350,19 @@ html
                 $('.buzz .lines').eq(0).clone().appendTo('.buzz');
               }
             };
+
+
+            var initSkroller = function() {
+                $('.parallaxPic').css("display","block");
+
+                imagesLoaded( document.querySelector('.parallaxPic'), function( instance ) {
+                  console.log('all memories images are loaded');
+                  setTimeout(function(){
+                    var skrlr = skrollr.init();
+                  }, 1000);
+                });
+
+            }
 
 
 
@@ -350,7 +509,7 @@ html
                     playVelocity(LANDING_ANIMATION_1);
                 },1);
                 initScrollLink2outline();
-                var skrlr = skrollr.init();
+                initSkroller();
             });
         }(jQuery, window));
 

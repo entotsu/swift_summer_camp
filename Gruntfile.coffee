@@ -23,11 +23,12 @@ FTP_CONFIG =
             "./node_modules"
             "./node_modules/*"
             "**/Thumbs.db"
-            "Gruntfile.*"
+            # "Gruntfile.*"
             '**/.DS_Store'
             '**/.DS_Store*'
             'grunt-contrib-*'
             'package.json'
+            # "./public/img"#写真
         ]
         keep: []
         simple: true
