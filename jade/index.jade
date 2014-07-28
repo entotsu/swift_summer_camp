@@ -103,7 +103,7 @@ html(lang="ja")
     .page
 
       section#header.fillscreen
-        #headerBackground
+        #headerBackground(class="skrollable skrollable-between" data-center="background-position: center 0px;" data-top-bottom="background-position: center 400px;" style="background-position: 50% 0px;")
         .content
             //- span#top_date(style="opacity:0;") 2012/09/01 <span id="hyphen">−</span> 2012/09/01
             #top_swift_x_aizu
@@ -144,7 +144,7 @@ html(lang="ja")
                 path(fill='#14a6e2', stroke='none', d='M0,0L2560,0L0,250Z')
 
 
-      section#aizu
+      section#aizu(class="skrollable skrollable-between" data-bottom-top="background-position: center -400px;" data-top-bottom="background-position: center 400px;" style="background-position: 50% -500px;")
         .content
           .text
             h1 会津を観光しよう。<br>役立つアプリを<br>作ろう。
@@ -197,7 +197,8 @@ html(lang="ja")
 
 
 
-      section#recruitment
+      //- section#recruitment
+      section#recruitment(class="skrollable skrollable-between" data-bottom-top="background-position: center -400px;" data-top-bottom="background-position: center 400px;" style="background-position: 50% -500px;")
         .content
           .title
             h1 募集要項
@@ -226,11 +227,11 @@ html(lang="ja")
 
       section#photos
         .content
-          div(class="parallaxPic" id="parallax-3")
+          div(class="parallaxPic" id="parallax-2")
             img(src="img/memory/memory_01.jpg")
-          div(class="parallaxPic" id="parallax-1")
-            img(src="img/memory/memory_02.jpg" style="left:50%")
           div(class="parallaxPic" id="parallax-0")
+            img(src="img/memory/memory_02.jpg" style="left:50%")
+          div(class="parallaxPic" id="parallax-3")
             img(src="img/memory/memory_03.jpg")
           div(class="parallaxPic" id="parallax-1")
             img(src="img/memory/memory_04.jpg" style="left:50%")
