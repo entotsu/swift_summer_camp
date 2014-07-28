@@ -235,8 +235,6 @@ $outlineContentSizeAdjast: 50px
 
 
 
-
-
 #aizu
 	background: url(../img/seishunDoori.jpg)
 	background-size: cover
@@ -250,6 +248,11 @@ $outlineContentSizeAdjast: 50px
 		top: -20px
 		z-index: 0
 		opacity: 0.7
+		img#aizuPin
+			position: absolute
+			top: 311px
+			right: 297px
+
 	.content
 		position: relative
 		z-index: 1
@@ -287,6 +290,7 @@ $outlineContentSizeAdjast: 50px
 			width: 60%
 			text-align: left
 			color: white
+			z-index: 1
 			h1
 				line-height: 1.5em
 			p
@@ -294,7 +298,11 @@ $outlineContentSizeAdjast: 50px
 				line-height: 2em
 				font-size: 20px
 				font-weight: bolder
-
+		img
+			position: absolute
+			right: 0px
+			top: (800px - 300px) / 2
+			z-index: 0
 
 
 #MushUpAwards
@@ -308,6 +316,7 @@ $outlineContentSizeAdjast: 50px
 			right: 0
 			text-align: right
 			color: white
+			z-index: 1
 			h1
 				line-height: 1.5em
 			p
@@ -315,6 +324,11 @@ $outlineContentSizeAdjast: 50px
 				line-height: 2em
 				font-size: 20px
 				font-weight: bolder
+		img
+			position: absolute
+			left: -50px
+			top: (800px - 300px) / 2
+			z-index: 0
 
 
 
@@ -374,7 +388,6 @@ $periodFontSize : 81px
 			color: white
 			h1
 				padding-top: $schedule_titlePaddingTop
-				color: white
 				font-size: $schedule_title_fontSize
 			p.period
 				margin-top: $scheduleContentHeight / 2 - $periodFontSize/2 - $schedule_titlePaddingTop - $schedule_title_fontSize //中央
@@ -394,10 +407,14 @@ $costFontSize: 100px
 	background-color: #5aaae7
 	.content
 		height: $costContentheight
+		color: white
 		h1
 			padding-top: $schedule_titlePaddingTop
-			color: white
 			font-size: $schedule_title_fontSize
+		p
+			margin-top: $scheduleContentHeight / 2 - $periodFontSize/2 - $schedule_titlePaddingTop - $schedule_title_fontSize //中央
+			font-size: $periodFontSize
+			font-weight: bolder
 		img
 			position: absolute
 			right: 0

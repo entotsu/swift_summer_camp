@@ -2782,7 +2782,7 @@ h2 {
   right: 27px;
 }
 
-/* line 240, ../../sass/style.sass */
+/* line 238, ../../sass/style.sass */
 #aizu {
   background: url(../img/seishunDoori.jpg);
   background-size: cover;
@@ -2791,7 +2791,7 @@ h2 {
   position: relative;
   overflow: hidden;
 }
-/* line 247, ../../sass/style.sass */
+/* line 245, ../../sass/style.sass */
 #aizu .map {
   position: absolute;
   left: -350px;
@@ -2799,13 +2799,19 @@ h2 {
   z-index: 0;
   opacity: 0.7;
 }
-/* line 253, ../../sass/style.sass */
+/* line 251, ../../sass/style.sass */
+#aizu .map img#aizuPin {
+  position: absolute;
+  top: 311px;
+  right: 297px;
+}
+/* line 256, ../../sass/style.sass */
 #aizu .content {
   position: relative;
   z-index: 1;
   padding-top: 100px;
 }
-/* line 257, ../../sass/style.sass */
+/* line 260, ../../sass/style.sass */
 #aizu .content .text {
   position: absolute;
   right: 0px;
@@ -2813,12 +2819,12 @@ h2 {
   color: white;
   text-align: right;
 }
-/* line 263, ../../sass/style.sass */
+/* line 266, ../../sass/style.sass */
 #aizu .content .text h1 {
   line-height: 1.5em;
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 266, ../../sass/style.sass */
+/* line 269, ../../sass/style.sass */
 #aizu .content .text p {
   padding: 10px;
   display: inline-block;
@@ -2830,37 +2836,45 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 280, ../../sass/style.sass */
+/* line 283, ../../sass/style.sass */
 #swift {
   background-color: #f6a121;
   min-height: 800px;
 }
-/* line 284, ../../sass/style.sass */
+/* line 287, ../../sass/style.sass */
 #swift .content .text {
   position: absolute;
   margin-top: 208px;
   width: 60%;
   text-align: left;
   color: white;
+  z-index: 1;
 }
-/* line 290, ../../sass/style.sass */
+/* line 294, ../../sass/style.sass */
 #swift .content .text h1 {
   line-height: 1.5em;
 }
-/* line 292, ../../sass/style.sass */
+/* line 296, ../../sass/style.sass */
 #swift .content .text p {
   margin: 20px 0 0 auto;
   line-height: 2em;
   font-size: 20px;
   font-weight: bolder;
 }
+/* line 301, ../../sass/style.sass */
+#swift .content img {
+  position: absolute;
+  right: 0px;
+  top: 250px;
+  z-index: 0;
+}
 
-/* line 300, ../../sass/style.sass */
+/* line 308, ../../sass/style.sass */
 #MushUpAwards {
   background-color: #e74b62;
   min-height: 800px;
 }
-/* line 304, ../../sass/style.sass */
+/* line 312, ../../sass/style.sass */
 #MushUpAwards .content .text {
   position: absolute;
   margin-top: 208px;
@@ -2868,68 +2882,76 @@ h2 {
   right: 0;
   text-align: right;
   color: white;
+  z-index: 1;
 }
-/* line 311, ../../sass/style.sass */
+/* line 320, ../../sass/style.sass */
 #MushUpAwards .content .text h1 {
   line-height: 1.5em;
 }
-/* line 313, ../../sass/style.sass */
+/* line 322, ../../sass/style.sass */
 #MushUpAwards .content .text p {
   margin: 20px 0 0 auto;
   line-height: 2em;
   font-size: 20px;
   font-weight: bolder;
 }
+/* line 327, ../../sass/style.sass */
+#MushUpAwards .content img {
+  position: absolute;
+  left: -50px;
+  top: 250px;
+  z-index: 0;
+}
 
-/* line 326, ../../sass/style.sass */
+/* line 340, ../../sass/style.sass */
 #recruitment {
   background-image: url(../img/personsBlur3.jpg);
   background-size: cover;
   height: 900px;
 }
-/* line 330, ../../sass/style.sass */
+/* line 344, ../../sass/style.sass */
 #recruitment .content {
   padding-top: 100px;
 }
-/* line 332, ../../sass/style.sass */
+/* line 346, ../../sass/style.sass */
 #recruitment .content .title {
   text-align: right;
 }
-/* line 334, ../../sass/style.sass */
+/* line 348, ../../sass/style.sass */
 #recruitment .content .title h1 {
   display: inline;
   margin-top: 20px;
   font-size: 100px;
   color: white;
 }
-/* line 339, ../../sass/style.sass */
+/* line 353, ../../sass/style.sass */
 #recruitment .content .requirementList {
   width: 52%;
   margin-top: 80px;
 }
-/* line 342, ../../sass/style.sass */
+/* line 356, ../../sass/style.sass */
 #recruitment .content .requirementList ul {
   list-style-type: disc;
 }
-/* line 344, ../../sass/style.sass */
+/* line 358, ../../sass/style.sass */
 #recruitment .content .requirementList ul li {
   margin-top: 30px;
   color: white;
   font-weight: bolder;
   font-size: 32px;
 }
-/* line 349, ../../sass/style.sass */
+/* line 363, ../../sass/style.sass */
 #recruitment .content .persons {
   position: absolute;
   right: 0;
   top: 275px;
 }
-/* line 353, ../../sass/style.sass */
+/* line 367, ../../sass/style.sass */
 #recruitment .content .persons img {
   margin: 20px;
   opacity: 0.83;
 }
-/* line 356, ../../sass/style.sass */
+/* line 370, ../../sass/style.sass */
 #recruitment .content .persons .limitOfPerson {
   margin-top: 20px;
   color: white;
@@ -2938,76 +2960,81 @@ h2 {
   text-align: center;
 }
 
-/* line 369, ../../sass/style.sass */
+/* line 383, ../../sass/style.sass */
 #schedule {
   background-color: #bc61e7;
 }
-/* line 371, ../../sass/style.sass */
+/* line 385, ../../sass/style.sass */
 #schedule .content {
   height: 700px;
 }
-/* line 373, ../../sass/style.sass */
+/* line 387, ../../sass/style.sass */
 #schedule .content #sheduleOutline {
   color: white;
 }
-/* line 375, ../../sass/style.sass */
+/* line 389, ../../sass/style.sass */
 #schedule .content #sheduleOutline h1 {
   padding-top: 100px;
-  color: white;
   font-size: 100px;
 }
-/* line 379, ../../sass/style.sass */
+/* line 392, ../../sass/style.sass */
 #schedule .content #sheduleOutline p.period {
   margin-top: 109.5px;
   font-size: 81px;
   font-weight: bolder;
 }
-/* line 383, ../../sass/style.sass */
+/* line 396, ../../sass/style.sass */
 #schedule .content #sheduleOutline img.calender {
   position: absolute;
   right: 0;
   top: 150px;
 }
 
-/* line 393, ../../sass/style.sass */
+/* line 406, ../../sass/style.sass */
 #cost {
   background-color: #5aaae7;
 }
-/* line 395, ../../sass/style.sass */
+/* line 408, ../../sass/style.sass */
 #cost .content {
   height: 700px;
+  color: white;
 }
-/* line 397, ../../sass/style.sass */
+/* line 411, ../../sass/style.sass */
 #cost .content h1 {
   padding-top: 100px;
-  color: white;
   font-size: 100px;
 }
-/* line 401, ../../sass/style.sass */
+/* line 414, ../../sass/style.sass */
+#cost .content p {
+  margin-top: 109.5px;
+  font-size: 81px;
+  font-weight: bolder;
+}
+/* line 418, ../../sass/style.sass */
 #cost .content img {
   position: absolute;
   right: 0;
   top: 150px;
 }
 
-/* line 418, ../../sass/style.sass */
+/* line 435, ../../sass/style.sass */
 #photos {
   height: 11000px;
   background: url(../img/sparkles.gif), url(../img/bg-top.png), url(../img/bg-bottom.png);
   background-position: top, top, bottom;
   background-repeat: repeat, repeat-x, repeat-x;
 }
-/* line 424, ../../sass/style.sass */
+/* line 441, ../../sass/style.sass */
 #photos .content div.parallaxPic {
   position: relative;
   display: none;
 }
-/* line 427, ../../sass/style.sass */
+/* line 444, ../../sass/style.sass */
 #photos .content div.parallaxPic img {
   position: relative;
 }
 
-/* line 432, ../../sass/style.sass */
+/* line 449, ../../sass/style.sass */
 #prize {
   position: relative;
   height: 1000px;
@@ -3015,7 +3042,7 @@ h2 {
   background-color: #00b9c1;
   margin: 0 auto;
 }
-/* line 439, ../../sass/style.sass */
+/* line 456, ../../sass/style.sass */
 #prize p {
   position: absolute;
   width: 100%;
@@ -3026,22 +3053,22 @@ h2 {
   color: white;
 }
 
-/* line 453, ../../sass/style.sass */
+/* line 470, ../../sass/style.sass */
 #applicationForm {
   background-color: #00b9c1;
   height: 1500px;
 }
-/* line 457, ../../sass/style.sass */
+/* line 474, ../../sass/style.sass */
 #applicationForm .content {
   text-align: center;
   width: 1000px;
 }
-/* line 460, ../../sass/style.sass */
+/* line 477, ../../sass/style.sass */
 #applicationForm .content img#finalMessage {
   margin: 0px auto 200px auto;
   display: block;
 }
-/* line 465, ../../sass/style.sass */
+/* line 482, ../../sass/style.sass */
 #applicationForm .ghostButton {
   border-radius: 24px;
   -moz-border-radius: 24px;
@@ -3065,7 +3092,7 @@ h2 {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 485, ../../sass/style.sass */
+/* line 502, ../../sass/style.sass */
 #applicationForm .ghostButton:hover {
   background-color: white;
   color: #00b9c1;
