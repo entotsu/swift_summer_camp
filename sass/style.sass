@@ -480,10 +480,11 @@ $buttonSizeRatio: 4
 		display: inline-block
 		box-shadow: none
 		-webkit-box-shadow: none
-		transition: all .5s ease-in
-		-webkit-transition: all .5s ease-in
-		-moz-transition: all .5s ease-in
-		-ms-transition: all .5s ease-in
-		-o-transition: all .5s ease-in
+		+transition(all .5s ease-in-out)
 
+	.ghostButton:hover
+		background-color: white
+		color: $blueGreenColor
+		text-decoration: underline
+		cursor: pointer
 		
