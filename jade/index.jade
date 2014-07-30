@@ -2,6 +2,7 @@ doctype html
 html(lang="ja")
   head
     meta(charset="utf-8")
+    meta(name="viewport" content="width=1200")
     title 会津Swift合宿 2014
     link(href="css/lib/jquery-letterfx.min.css" rel="stylesheet" type="text/css")
     link(href="css/style.css" rel="stylesheet" type="text/css")
@@ -98,10 +99,20 @@ html(lang="ja")
       }
 
 
+  body#skrollr-body
 
-  body
+    //- Script of Facebook like button
+    | <div id="fb-root"></div>
+    | <script>(function(d, s, id) {
+    |   var js, fjs = d.getElementsByTagName(s)[0];
+    |   if (d.getElementById(id)) return;
+    |   js = d.createElement(s); js.id = id;
+    |   js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=278696802286743&version=v2.0";
+    |   fjs.parentNode.insertBefore(js, fjs);
+    | }(document, 'script', 'facebook-jssdk'));</script>
+
+
     .page
-
       section#header.fillscreen
         #headerBackground(class="skrollable skrollable-between" data-center="background-position: center 0px;" data-top-bottom="background-position: center 400px;" style="background-position: 50% 0px;")
         .content
@@ -124,6 +135,11 @@ html(lang="ja")
                 a(href="#outline")
                     span take a look
                     i(class="fa fa-flag fa-arrow-down")
+
+            p#scrollIndicator_onlyMobile(style="opacity:0;")
+              | view
+              i(class="fa fa-flag fa-arrow-down fa-2x")
+              | project
 
 
       section#outline( style="position:relative;top:0px;", data-0="top:0px;", data-1200="top:-800px;")
@@ -177,8 +193,8 @@ html(lang="ja")
           //-カルーセルのライブラリ使うべきだな
           .scheduleItem#sheduleOutline
             h1 日程
-            p.period 9/1 ~ 9/10
-            img.calender(src='img/sep1.png')
+            p.period 9/4 ~ 9/13
+            img.calender(src='img/sep4.png')
 
           .scheduleItem#shedule1
           .scheduleItem#shedule2
@@ -190,8 +206,8 @@ html(lang="ja")
       section#cost
         .content
           h1 参加費
-          p 無料 <span style="font-size:40px">+ 交通費支給</span>
-          img.freeImg(src='img/free.png')
+          p 無料 <span style="font-size:40px">+ 交通費支給 + 宿の手配</span> <span style="font-size:18px;font-weight:100"><br>※交通費と宿の支給は遠方からの参加者のみです。</span>
+          img.freeImg(src='img/free2.png')
           //- p
             span 参加費
 
@@ -222,6 +238,7 @@ html(lang="ja")
               img.person(src="img/person_white.png")
               img.person(src="img/person_white.png")
             p.limitOfPerson 6名
+            p.limitOfTraveler ※遠方からの参加者は３名限定。
 
 
 
@@ -289,20 +306,22 @@ html(lang="ja")
 
 
       section#prize(class="skrollable skrollable-between" data-bottom-top="background-position: center -400px;" data-center="background-position: center 200px;" style="background-position: 50% -500px;")
-          p(class="skrollable skrollable-between" data-bottom-top="bottom:30%;" data-center="bottom:20%;" style="bottom:30%;") 優勝賞品はiPad Air!!
+          p(class="skrollable skrollable-between" data-bottom-top="bottom:30%;" data-center="bottom:20%;" style="bottom:30%;") 優勝賞品はiPad mini!!
 
 
       section#applicationForm
         .content
           img#finalMessage(src="img/finalMessage.png")
           a#applicationButton.ghostButton 応募する！
+
           div#shareButtons
+            div#likeBox
+              | <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="400" data-layout="standard" data-action="like" data-show-faces="true" data-share="false"></div>
 
-
+            div#tweetButton
+              | <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              //- | <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-size="large">ツイート</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       section#fottter
-
-
-
 
 
 
@@ -315,8 +334,18 @@ html(lang="ja")
     script(src='js/lib/skrollr.stylesheets.min.js')
     script(src='js/main.js')
     script.
+
+        // iPhone/iPad/iPod、Androidの場合は振り分けを判断
+        if ( navigator.userAgent.indexOf('iPhone') > 0  
+        || navigator.userAgent.indexOf('iPod') > 0 
+        || (navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0) ) {
+          window.isMobile = true;
+        }
+
         (function($,w,undefined){
             console.log("init function start");
+
+            var skrlr;
 
             // ------------- resize -------------
             var resizeTimeout;
@@ -358,10 +387,18 @@ html(lang="ja")
             var initSkroller = function() {
                 $('.parallaxPic').css("display","block");
 
+                var mobileOption;
+                if (window.isMobile) {
+                  mobileOption = {
+                    mobileDeceleration: 0.0005,
+                    scale: 1.5
+                  }
+                }
+
                 imagesLoaded( document.querySelector('.parallaxPic'), function( instance ) {
                   console.log('all memories images are loaded');
                   setTimeout(function(){
-                    var skrlr = skrollr.init();
+                    skrlr = skrollr.init(mobileOption);
                   }, 1000);
                 });
 
@@ -421,7 +458,12 @@ html(lang="ja")
                             complete: function() {
                                 //- initBuzzText();//重い
                                 setTimeout(function(){
-                                    playVelocity(LANDING_ANIMATION_3);
+                                    var nextAnimation;
+                                    if (window.isMobile)
+                                      nextAnimation = LANDING_ANIMATION_3_forMobile;
+                                    else
+                                      nextAnimation = LANDING_ANIMATION_3;
+                                    playVelocity(nextAnimation);
                                 },1000)
                             }
                         }
@@ -430,6 +472,13 @@ html(lang="ja")
             };
             var LANDING_ANIMATION_3 = {
                 "#take-a-look" : [{
+                    anims: [{
+                        properties: "landing.fadeInSlideUp"
+                    }]
+                }]
+            };
+            var LANDING_ANIMATION_3_forMobile = {
+                "#scrollIndicator_onlyMobile" : [{
                     anims: [{
                         properties: "landing.fadeInSlideUp"
                     }]
@@ -493,19 +542,36 @@ html(lang="ja")
             
 
             var initScrollLink2outline = function() {
-                $('a[href^=#outline]').click(function(){
-                    var speed = 500;
-                    var href= $(this).attr("href");
-                    var target = $(href == "#" || href == "" ? 'html' : href);
-                    var position = target.offset().top - 450;
-                    $("html, body").animate({scrollTop:position}, speed, "swing");
-                    return false;
-                });
+                if (! window.isMobile) {
+                  $('a[href^=#outline]').click(function(){
+                      var href= $(this).attr("href");
+                      var target = $(href == "#" || href == "" ? 'html' : href);
+                      var position = target.offset().top - 450;
+                      var speed = 500;
+                      $("html, body").animate({scrollTop:position}, speed, "swing");
+                      return false;
+                  });
+                }
+            }
+
+
+
+            var mobile_setPalalaxDisable = function() {
+              $("#headerBackground, #aizu, #recruitment").attr({
+                "style": "",
+                "data-bottom-top": "",
+                "data-top-bottom": ""
+              });
             }
 
 
             $(document).ready(function(){
                 console.log("document ready")
+
+                if (window.isMobile) {
+                  mobile_setPalalaxDisable();
+                }
+
                 resizeLanding();
                 addCustomAnimation();
                 setTimeout(function(){
@@ -513,6 +579,7 @@ html(lang="ja")
                 },1);
                 initScrollLink2outline();
                 initSkroller();
+
             });
         }(jQuery, window));
 

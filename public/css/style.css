@@ -2740,49 +2740,58 @@ h2 {
   text-decoration: underline;
   cursor: pointer;
 }
+/* line 194, ../../sass/style.sass */
+#header .content #scrollIndicator_onlyMobile {
+  text-align: center;
+  font-size: 50px;
+}
+/* line 197, ../../sass/style.sass */
+#header .content #scrollIndicator_onlyMobile i {
+  padding: 20px;
+}
 
-/* line 208, ../../sass/style.sass */
+/* line 212, ../../sass/style.sass */
 #outline {
   position: relative;
   z-index: 2;
   margin-bottom: -800px;
 }
-/* line 212, ../../sass/style.sass */
+/* line 216, ../../sass/style.sass */
 #outline .header_angle {
   margin-bottom: -25px;
 }
-/* line 214, ../../sass/style.sass */
+/* line 218, ../../sass/style.sass */
 #outline .content_wrapper {
   background-color: #14a6e2;
   margin-top: -50px;
   margin-bottom: -50px;
 }
-/* line 218, ../../sass/style.sass */
+/* line 222, ../../sass/style.sass */
 #outline .content_wrapper .content {
   position: relative;
   z-index: 10;
   color: white;
 }
-/* line 222, ../../sass/style.sass */
+/* line 226, ../../sass/style.sass */
 #outline .content_wrapper .content h2 {
   margin: 40px 0;
   font-size: 30px;
   line-height: 1.75em;
 }
-/* line 226, ../../sass/style.sass */
+/* line 230, ../../sass/style.sass */
 #outline .content_wrapper .content p {
   font-size: 12px;
   width: 300px;
   line-height: 1.75em;
 }
-/* line 230, ../../sass/style.sass */
+/* line 234, ../../sass/style.sass */
 #outline .content_wrapper .content img {
   position: absolute;
   top: 99px;
   right: 27px;
 }
 
-/* line 238, ../../sass/style.sass */
+/* line 242, ../../sass/style.sass */
 #aizu {
   background: url(../img/seishunDoori.jpg);
   background-size: cover;
@@ -2791,7 +2800,7 @@ h2 {
   position: relative;
   overflow: hidden;
 }
-/* line 245, ../../sass/style.sass */
+/* line 249, ../../sass/style.sass */
 #aizu .map {
   position: absolute;
   left: -350px;
@@ -2799,19 +2808,19 @@ h2 {
   z-index: 0;
   opacity: 0.7;
 }
-/* line 251, ../../sass/style.sass */
+/* line 255, ../../sass/style.sass */
 #aizu .map img#aizuPin {
   position: absolute;
   top: 311px;
   right: 297px;
 }
-/* line 256, ../../sass/style.sass */
+/* line 260, ../../sass/style.sass */
 #aizu .content {
   position: relative;
   z-index: 1;
   padding-top: 100px;
 }
-/* line 260, ../../sass/style.sass */
+/* line 264, ../../sass/style.sass */
 #aizu .content .text {
   position: absolute;
   right: 0px;
@@ -2819,12 +2828,12 @@ h2 {
   color: white;
   text-align: right;
 }
-/* line 266, ../../sass/style.sass */
+/* line 270, ../../sass/style.sass */
 #aizu .content .text h1 {
   line-height: 1.5em;
   background-color: rgba(0, 0, 0, 0.5);
 }
-/* line 269, ../../sass/style.sass */
+/* line 273, ../../sass/style.sass */
 #aizu .content .text p {
   padding: 10px;
   display: inline-block;
@@ -2836,12 +2845,12 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 283, ../../sass/style.sass */
+/* line 287, ../../sass/style.sass */
 #swift {
   background-color: #f6a121;
   min-height: 800px;
 }
-/* line 287, ../../sass/style.sass */
+/* line 291, ../../sass/style.sass */
 #swift .content .text {
   position: absolute;
   margin-top: 208px;
@@ -2850,18 +2859,18 @@ h2 {
   color: white;
   z-index: 1;
 }
-/* line 294, ../../sass/style.sass */
+/* line 298, ../../sass/style.sass */
 #swift .content .text h1 {
   line-height: 1.5em;
 }
-/* line 296, ../../sass/style.sass */
+/* line 300, ../../sass/style.sass */
 #swift .content .text p {
   margin: 20px 0 0 auto;
   line-height: 2em;
   font-size: 20px;
   font-weight: bolder;
 }
-/* line 301, ../../sass/style.sass */
+/* line 305, ../../sass/style.sass */
 #swift .content img {
   position: absolute;
   right: 0px;
@@ -2869,12 +2878,12 @@ h2 {
   z-index: 0;
 }
 
-/* line 308, ../../sass/style.sass */
+/* line 312, ../../sass/style.sass */
 #MushUpAwards {
   background-color: #e74b62;
   min-height: 800px;
 }
-/* line 312, ../../sass/style.sass */
+/* line 316, ../../sass/style.sass */
 #MushUpAwards .content .text {
   position: absolute;
   margin-top: 208px;
@@ -2884,18 +2893,18 @@ h2 {
   color: white;
   z-index: 1;
 }
-/* line 320, ../../sass/style.sass */
+/* line 324, ../../sass/style.sass */
 #MushUpAwards .content .text h1 {
   line-height: 1.5em;
 }
-/* line 322, ../../sass/style.sass */
+/* line 326, ../../sass/style.sass */
 #MushUpAwards .content .text p {
   margin: 20px 0 0 auto;
   line-height: 2em;
   font-size: 20px;
   font-weight: bolder;
 }
-/* line 327, ../../sass/style.sass */
+/* line 331, ../../sass/style.sass */
 #MushUpAwards .content img {
   position: absolute;
   left: -50px;
@@ -2903,121 +2912,127 @@ h2 {
   z-index: 0;
 }
 
-/* line 340, ../../sass/style.sass */
+/* line 344, ../../sass/style.sass */
 #recruitment {
   background-image: url(../img/personsBlur3.jpg);
   background-size: cover;
   height: 900px;
 }
-/* line 344, ../../sass/style.sass */
+/* line 348, ../../sass/style.sass */
 #recruitment .content {
   padding-top: 100px;
+  color: white;
 }
-/* line 346, ../../sass/style.sass */
+/* line 351, ../../sass/style.sass */
 #recruitment .content .title {
   text-align: right;
 }
-/* line 348, ../../sass/style.sass */
+/* line 353, ../../sass/style.sass */
 #recruitment .content .title h1 {
   display: inline;
   margin-top: 20px;
   font-size: 100px;
-  color: white;
 }
-/* line 353, ../../sass/style.sass */
+/* line 357, ../../sass/style.sass */
 #recruitment .content .requirementList {
   width: 52%;
   margin-top: 80px;
 }
-/* line 356, ../../sass/style.sass */
+/* line 360, ../../sass/style.sass */
 #recruitment .content .requirementList ul {
   list-style-type: disc;
 }
-/* line 358, ../../sass/style.sass */
+/* line 362, ../../sass/style.sass */
 #recruitment .content .requirementList ul li {
   margin-top: 30px;
-  color: white;
   font-weight: bolder;
   font-size: 32px;
 }
-/* line 363, ../../sass/style.sass */
+/* line 366, ../../sass/style.sass */
 #recruitment .content .persons {
   position: absolute;
   right: 0;
   top: 275px;
 }
-/* line 367, ../../sass/style.sass */
+/* line 370, ../../sass/style.sass */
 #recruitment .content .persons img {
   margin: 20px;
   opacity: 0.83;
 }
-/* line 370, ../../sass/style.sass */
+/* line 373, ../../sass/style.sass */
 #recruitment .content .persons .limitOfPerson {
   margin-top: 20px;
-  color: white;
   font-size: 100px;
   font-weight: bolder;
   text-align: center;
 }
+/* line 378, ../../sass/style.sass */
+#recruitment .content .persons .limitOfTraveler {
+  padding-top: 36px;
+  font-size: 18px;
+  text-align: center;
+}
 
-/* line 383, ../../sass/style.sass */
+/* line 388, ../../sass/style.sass */
 #schedule {
   background-color: #bc61e7;
 }
-/* line 385, ../../sass/style.sass */
+/* line 390, ../../sass/style.sass */
 #schedule .content {
   height: 700px;
 }
-/* line 387, ../../sass/style.sass */
+/* line 392, ../../sass/style.sass */
 #schedule .content #sheduleOutline {
   color: white;
 }
-/* line 389, ../../sass/style.sass */
+/* line 394, ../../sass/style.sass */
 #schedule .content #sheduleOutline h1 {
   padding-top: 100px;
   font-size: 100px;
 }
-/* line 392, ../../sass/style.sass */
+/* line 397, ../../sass/style.sass */
 #schedule .content #sheduleOutline p.period {
   margin-top: 109.5px;
   font-size: 81px;
   font-weight: bolder;
 }
-/* line 396, ../../sass/style.sass */
+/* line 401, ../../sass/style.sass */
 #schedule .content #sheduleOutline img.calender {
   position: absolute;
   right: 0;
   top: 150px;
 }
 
-/* line 406, ../../sass/style.sass */
+/* line 411, ../../sass/style.sass */
 #cost {
   background-color: #5aaae7;
 }
-/* line 408, ../../sass/style.sass */
+/* line 413, ../../sass/style.sass */
 #cost .content {
   height: 700px;
   color: white;
 }
-/* line 411, ../../sass/style.sass */
+/* line 416, ../../sass/style.sass */
 #cost .content h1 {
   padding-top: 100px;
   font-size: 100px;
 }
-/* line 414, ../../sass/style.sass */
+/* line 419, ../../sass/style.sass */
 #cost .content p {
   margin-top: 109.5px;
   font-size: 81px;
   font-weight: bolder;
+  position: relative;
+  z-index: 2;
 }
-/* line 418, ../../sass/style.sass */
+/* line 425, ../../sass/style.sass */
 #cost .content img {
   position: absolute;
   right: -50px;
   top: 150px;
 }
 
-/* line 435, ../../sass/style.sass */
+/* line 442, ../../sass/style.sass */
 #photos {
   height: 11000px;
   padding-top: 300px;
@@ -3025,17 +3040,17 @@ h2 {
   background-position: top, top, bottom;
   background-repeat: repeat, repeat-x, repeat-x;
 }
-/* line 442, ../../sass/style.sass */
+/* line 449, ../../sass/style.sass */
 #photos .content div.parallaxPic {
   position: relative;
   display: none;
 }
-/* line 445, ../../sass/style.sass */
+/* line 452, ../../sass/style.sass */
 #photos .content div.parallaxPic img {
   position: relative;
 }
 
-/* line 450, ../../sass/style.sass */
+/* line 457, ../../sass/style.sass */
 #prize {
   position: relative;
   height: 1000px;
@@ -3043,7 +3058,7 @@ h2 {
   background-color: #00b9c1;
   margin: 0 auto;
 }
-/* line 457, ../../sass/style.sass */
+/* line 464, ../../sass/style.sass */
 #prize p {
   position: absolute;
   width: 100%;
@@ -3054,22 +3069,22 @@ h2 {
   color: white;
 }
 
-/* line 471, ../../sass/style.sass */
+/* line 478, ../../sass/style.sass */
 #applicationForm {
   background-color: #00b9c1;
-  height: 1500px;
+  height: 1200px;
 }
-/* line 475, ../../sass/style.sass */
+/* line 482, ../../sass/style.sass */
 #applicationForm .content {
   text-align: center;
   width: 1000px;
 }
-/* line 478, ../../sass/style.sass */
+/* line 485, ../../sass/style.sass */
 #applicationForm .content img#finalMessage {
   margin: 0px auto 200px auto;
   display: block;
 }
-/* line 483, ../../sass/style.sass */
+/* line 490, ../../sass/style.sass */
 #applicationForm .ghostButton {
   border-radius: 24px;
   -moz-border-radius: 24px;
@@ -3093,10 +3108,24 @@ h2 {
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 503, ../../sass/style.sass */
+/* line 510, ../../sass/style.sass */
 #applicationForm .ghostButton:hover {
   background-color: white;
   color: #00b9c1;
   text-decoration: underline;
   cursor: pointer;
+}
+/* line 518, ../../sass/style.sass */
+#applicationForm #shareButtons {
+  margin: 50px auto;
+  width: 400px;
+  text-align: left;
+}
+/* line 524, ../../sass/style.sass */
+#applicationForm #shareButtons #tweetButton {
+  margin-bottom: 40px;
+}
+/* line 526, ../../sass/style.sass */
+#applicationForm #shareButtons #likeBox {
+  margin-bottom: 15px;
 }

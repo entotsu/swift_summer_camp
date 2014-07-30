@@ -191,7 +191,11 @@ h2
 				text-decoration: underline
 				cursor: pointer
 
-
+		#scrollIndicator_onlyMobile
+			text-align: center
+			font-size: 50px
+			i
+				padding: 20px
 
 
 
@@ -343,13 +347,13 @@ $outlineContentSizeAdjast: 50px
 	height: 900px
 	.content
 		padding-top: 100px
+		color: white
 		.title
 			text-align: right
 			h1
 				display: inline
 				margin-top: 20px
 				font-size: 100px
-				color: white
 		.requirementList
 			width: 52%
 			margin-top: 80px
@@ -357,7 +361,6 @@ $outlineContentSizeAdjast: 50px
 				list-style-type: disc
 				li
 					margin-top: 30px
-					color: white
 					font-weight: bolder
 					font-size: 32px
 		.persons
@@ -369,11 +372,13 @@ $outlineContentSizeAdjast: 50px
 				opacity: 0.83
 			.limitOfPerson
 				margin-top: 20px
-				color: white
 				font-size: 100px
 				font-weight: bolder
 				text-align: center
-
+			.limitOfTraveler
+				padding-top: 36px
+				font-size: 18px
+				text-align: center
 
 
 $scheduleContentHeight: 700px
@@ -415,6 +420,8 @@ $costFontSize: 100px
 			margin-top: $scheduleContentHeight / 2 - $periodFontSize/2 - $schedule_titlePaddingTop - $schedule_title_fontSize //中央
 			font-size: $periodFontSize
 			font-weight: bolder
+			position: relative
+			z-index: 2
 		img
 			position: absolute
 			right: -50px
@@ -470,7 +477,7 @@ $costFontSize: 100px
 $buttonSizeRatio: 4
 #applicationForm
 	background-color: #00b9c1
-	height: 1500px
+	height: 1200px
 
 	.content
 		text-align: center
@@ -506,3 +513,16 @@ $buttonSizeRatio: 4
 		text-decoration: underline
 		cursor: pointer
 		
+
+
+	#shareButtons
+		margin: 50px auto
+		width: 400px
+		// border: 1px solid red
+		text-align: left
+
+		#tweetButton
+			margin-bottom: 40px
+		#likeBox
+			margin-bottom: 15px
+
