@@ -3072,7 +3072,7 @@ h2 {
 /* line 478, ../sass/style.sass */
 #applicationForm {
   background-color: #00b9c1;
-  height: 2000px;
+  height: 1700px;
 }
 /* line 482, ../sass/style.sass */
 #applicationForm .content {
@@ -3118,11 +3118,21 @@ h2 {
 /* line 518, ../sass/style.sass */
 #applicationForm #shareButtons {
   margin: 100px auto;
-  width: 400px;
+  width: 600px;
   text-align: center;
 }
 /* line 523, ../sass/style.sass */
 #applicationForm #shareButtons > div {
   margin: 100px auto;
   text-align: center;
+}
+/* line 526, ../sass/style.sass */
+#applicationForm #shareButtons #tweetButton {
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+/* line 530, ../sass/style.sass */
+#applicationForm #shareButtons #likeBox {
+  margin-top: 10px;
 }
