@@ -219,39 +219,6 @@
           </div>
         </div>
       </section>
-      <section id="photos">
-        <div class="content">
-          <div id="parallax-2" class="parallaxPic"><img src="img/memory/memory_01.jpg"></div>
-          <div id="parallax-0" class="parallaxPic"><img src="img/memory/memory_02.jpg" style="left:50%"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_03.jpg"></div>
-          <div id="parallax-1" class="parallaxPic"><img src="img/memory/memory_04.jpg" style="left:50%"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_05.jpg" style="left:50%"></div>
-          <div id="parallax-1" class="parallaxPic"><img src="img/memory/memory_06.jpg"></div>
-          <div id="parallax-2" class="parallaxPic"><img src="img/memory/memory_07.jpg" style="left:50%"></div>
-          <div id="parallax-0" class="parallaxPic"><img src="img/memory/memory_08.jpg"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_09.jpg" style="left:50%"></div>
-          <div id="parallax-1" class="parallaxPic"><img src="img/memory/memory_10.jpg"></div>
-          <div id="parallax-2" class="parallaxPic"><img src="img/memory/memory_11.jpg" style="left:50%"></div>
-          <div id="parallax-0" class="parallaxPic"><img src="img/memory/memory_13.jpg"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_14.jpg" style="left:50%"></div>
-          <div id="parallax-1" class="parallaxPic"><img src="img/memory/memory_15.jpg"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_16.jpg" style="left:50%"></div>
-          <div id="parallax-0" class="parallaxPic"><img src="img/memory/memory_17.jpg"></div>
-          <div id="parallax-2" class="parallaxPic"><img src="img/memory/memory_18.jpg" style="left:50%"></div>
-          <div id="parallax-1" class="parallaxPic"><img src="img/memory/memory_19.jpg"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_20.jpg" style="left:50%"></div>
-          <div id="parallax-0" class="parallaxPic"><img src="img/memory/memory_21.jpg" style="left:0%"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_23.jpg" style="left:50%"></div>
-          <div id="parallax-1" class="parallaxPic"><img src="img/memory/memory_22.jpg" style="left:0%"></div>
-          <div id="parallax-2" class="parallaxPic"><img src="img/memory/memory_25.jpg" style="left:50%"></div>
-          <div id="parallax-0" class="parallaxPic"><img src="img/memory/memory_24.jpg"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_26.jpg" style="left:50%"></div>
-          <div id="parallax-1" class="parallaxPic"><img src="img/memory/memory_27.jpg"></div>
-          <div id="parallax-2" class="parallaxPic"><img src="img/memory/memory_28.jpg" style="left:50%"></div>
-          <div id="parallax-0" class="parallaxPic"><img src="img/memory/memory_29.jpg"></div>
-          <div id="parallax-3" class="parallaxPic"><img src="img/memory/memory_30.jpg" style="left:50%"></div>
-        </div>
-      </section>
       <section id="prize" data-bottom-top="background-position: center -400px;" data-center="background-position: center 200px;" style="background-position: 50% -500px;" class="skrollable skrollable-between">
         <p data-bottom-top="bottom:30%;" data-center="bottom:20%;" style="bottom:30%;" class="skrollable skrollable-between">優勝賞品はiPad mini!!</p>
       </section>
@@ -335,12 +302,12 @@
                 }
               }
               
-              imagesLoaded( document.querySelector('.parallaxPic'), function( instance ) {
-                console.log('all memories images are loaded');
-                setTimeout(function(){
-                  skrlr = skrollr.init(mobileOption);
-                }, 1000);
-              });
+              setTimeout(function(){
+                skrlr = skrollr.init(mobileOption);
+              }, 1000);
+              //- imagesLoaded( document.querySelector('.parallaxPic'), function( instance ) {
+              //-   console.log('all memories images are loaded');
+              //- });
               
           }
           

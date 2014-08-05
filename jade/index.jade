@@ -250,7 +250,7 @@ html(lang="ja")
 
 
 
-      section#photos
+      //- section#photos
         .content
           div(class="parallaxPic" id="parallax-2")
             img(src="img/memory/memory_01.jpg")
@@ -404,12 +404,12 @@ html(lang="ja")
                   }
                 }
 
-                imagesLoaded( document.querySelector('.parallaxPic'), function( instance ) {
-                  console.log('all memories images are loaded');
-                  setTimeout(function(){
-                    skrlr = skrollr.init(mobileOption);
-                  }, 1000);
-                });
+                setTimeout(function(){
+                  skrlr = skrollr.init(mobileOption);
+                }, 1000);
+                //- imagesLoaded( document.querySelector('.parallaxPic'), function( instance ) {
+                //-   console.log('all memories images are loaded');
+                //- });
 
             }
 
