@@ -22,7 +22,7 @@ FTP_CONFIG =
             '**/.DS_Store*'
             'grunt-contrib-*'
             'package.json'
-            "././img"#写真
+            # "././img"#写真
         ]
         keep: []
         simple: true
